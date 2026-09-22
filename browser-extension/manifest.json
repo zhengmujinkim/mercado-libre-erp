@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "美客多 ERP 选品助手",
+  "version": "1.0.0",
+  "description": "浏览美客多/1688时一键采集商品数据，推送至 ERP 进行智能选品评分",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": [
+    "https://*.mercadolibre.com/*",
+    "https://*.mercadolibre.com.mx/*",
+    "https://*.mercadolivre.com.br/*",
+    "https://*.mercadolibre.com.ar/*",
+    "https://*.mercadolibre.cl/*",
+    "https://*.mercadolibre.com.co/*",
+    "https://*.1688.com/*",
+    "https://mercado-libre-erp.vercel.app/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "美客多 ERP 选品助手"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.mercadolibre.com/*",
+        "*://*.mercadolibre.com.mx/*",
+        "*://*.mercadolivre.com.br/*",
+        "*://*.mercadolibre.com.ar/*",
+        "*://*.mercadolibre.cl/*",
+        "*://*.mercadolibre.com.co/*",
+        "*://*.1688.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
