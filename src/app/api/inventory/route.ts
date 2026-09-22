@@ -8,8 +8,9 @@ export async function GET() {
       return NextResponse.json({ inventory: [], message: '请先授权美客多账号' });
     }
 
+    const userId = process.env.MELI_USER_ID || '3650205937';
     const res = await fetch(
-      'https://api.mercadolibre.com/users/3650205937/items/search?limit=50&offset=0',
+      `https://api.mercadolibre.com/users/${userId}/items/search?limit=50&offset=0`,
       {
         headers: { Authorization: `Bearer ${token}` },
         next: { revalidate: 60 },

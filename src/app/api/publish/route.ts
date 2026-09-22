@@ -68,7 +68,7 @@ export async function POST(request: NextRequest) {
       title: title.trim(),
       category_id,
       price: Number(price),
-      currency_id: 'BRL',
+      currency_id: 'USD',
       available_quantity: Number(available_quantity),
       buying_mode: 'buy_it_now',
       sale_terms: [],

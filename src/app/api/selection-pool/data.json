@@ -134,7 +134,7 @@
     "score": 90,
     "verdict": "watch",
     "note": "利润率高但需MAPA食品认证，跨境门槛高",
-    "status": "pending",
+    "status": "listed",
     "supplier_url": "https://s.1688.com/kq/-B3E8CEEFB6B3B8C9C1E3CAB3.html",
     "supplier_name": "成都麦蒂供应链科技有限公司",
     "supplier_price": 2.48,
@@ -148,7 +148,12 @@
       "moq": "1袋起",
       "monthly_sales": "3967311袋",
       "supplier_notes": "14年老店,山东济南,成交量最大(近400万袋),宠物店线下批发工厂"
-    }
+    },
+    "item_ids": {
+      "global": "CBT5302602026",
+      "MLB": "MLB7683884744"
+    },
+    "listed_at": "2026-09-22T19:26:52"
   },
   {
     "id": "p06",
@@ -260,13 +265,18 @@
     "score": 80,
     "verdict": "watch",
     "note": "利润绝对值高，但竞品2000+需差异化",
-    "status": "pending",
+    "status": "listed",
     "supplier_url": "https://s.1688.com/kq/-6C6564D5DBBDE5BEB5.html",
     "supplier_name": "义乌市环创日用品有限公司(LED便携折叠化妆镜)",
     "supplier_price": "¥8.50-11.50/个",
     "moq": "2个起批",
     "monthly_sales": "成交1058笔,7年厂家",
-    "supplier_notes": "台式桌面可立,智能美妆镜带LED灯,支持一件代发"
+    "supplier_notes": "台式桌面可立,智能美妆镜带LED灯,支持一件代发",
+    "item_ids": {
+      "global": "CBT5302401030",
+      "MLB": "MLB5274634965"
+    },
+    "listed_at": "2026-09-22T19:06:49"
   },
   {
     "id": "p10",
@@ -284,13 +294,18 @@
     "score": 80,
     "verdict": "go",
     "note": "与面膜碗套装有重叠，建议二选一",
-    "status": "pending",
+    "status": "listed",
     "supplier_url": "https://s.1688.com/kq/-B9E8BDBAC3E6C4A4CDEBCCD7D7B0.html",
     "supplier_name": "佛山市培旺教育科技有限公司(硅胶面膜碗3件套)",
     "supplier_price": "¥3.10/套(碗+软毛刷+调膜棒)",
     "moq": "2套起批",
     "monthly_sales": "月销5102笔,8年厂家",
-    "supplier_notes": "美容院专用,支持一件代发,7天包换"
+    "supplier_notes": "美容院专用,支持一件代发,7天包换",
+    "item_ids": {
+      "global": "CBT4403053681",
+      "MLB": "MLB7683785874"
+    },
+    "listed_at": "2026-09-22T19:08:18"
   },
   {
     "id": "p11",
@@ -308,13 +323,18 @@
     "score": 80,
     "verdict": "watch",
     "note": "巴西本土品牌强势，铺货难度大",
-    "status": "pending",
+    "status": "listed",
     "supplier_url": "https://s.1688.com/kq/-D2BBB4CED0D4CFB4C1B3BDED.html",
     "supplier_name": "东阳市康佬洁企业管理有限公司(纯棉洗脸巾)",
     "supplier_price": "¥1.71/包(100抽)",
     "moq": "1包起批",
     "monthly_sales": "成交215万+包",
-    "supplier_notes": "纯棉加厚珍珠纹,干湿两用,卸妆化妆洁面,4年厂家"
+    "supplier_notes": "纯棉加厚珍珠纹,干湿两用,卸妆化妆洁面,4年厂家",
+    "item_ids": {
+      "global": "CBT4403081923",
+      "MLB": "MLB5274657313"
+    },
+    "listed_at": "2026-09-22T19:10:00"
   },
   {
     "id": "p12",
@@ -322,7 +342,7 @@
     "name": "USB高清摄像头",
     "category": "electronics",
     "categoryLabel": "摄像头",
-    "categoryId": "CBT1669",
+    "categoryId": "CBT1667",
     "price1688": 9.8,
     "totalCost": 15.8,
     "sellUSD": 8.99,
@@ -332,13 +352,14 @@
     "score": 80,
     "verdict": "go",
     "note": "远程办公刚需，建议搭配三脚架捆绑销售",
-    "status": "pending",
+    "status": "listed",
     "supplier_url": "https://detail.1688.com/offer/922823483179.html",
     "supplier_name": "深圳市龙岗区牛载奇电子经营部",
     "supplier_price": 9.8,
     "moq": 2,
     "monthly_sales": "100+",
-    "supplier_notes": "支持一件代发,1080P款含三角支架,免驱动USB2.0,内置麦克风,113g轻量,48h发货"
+    "supplier_notes": "支持一件代发,1080P款含三角支架,免驱动USB2.0,内置麦克风,113g轻量,48h发货",
+    "listed_at": "2026-09-22T19:33:17"
   },
   {
     "id": "p13",
@@ -356,7 +377,7 @@
     "score": 80,
     "verdict": "go",
     "note": "极致轻小件，建议做套装提价到$6.99-8.99",
-    "status": "pending",
+    "status": "listed",
     "supplier_url": "https://s.1688.com/kq/-B3E8CEEFD6B8BCD7BCF4.html",
     "supplier_name": "惠州市惠宠家宠物用品有限公司",
     "supplier_price": 2.5,
@@ -370,7 +391,12 @@
       "moq": "1件起",
       "monthly_sales": "7044笔",
       "supplier_notes": "7年老店,广东阳江,价格最低,跨境宠物用品,适合大批量采购"
-    }
+    },
+    "item_ids": {
+      "global": "CBT4403105711",
+      "MLB": "MLB7683865992"
+    },
+    "listed_at": "2026-09-22T19:14:15"
   },
   {
     "id": "p14",
@@ -388,13 +414,18 @@
     "score": 75,
     "verdict": "go",
     "note": "短视频直播风口品，建议选Type-C版本",
-    "status": "pending",
+    "status": "listed",
     "supplier_url": "https://detail.1688.com/offer/735252047950.html",
     "supplier_name": "深圳节拍科技有限公司(8年老厂)",
     "supplier_price": 15.2,
     "moq": 1,
     "monthly_sales": "323000+套(成交)",
-    "supplier_notes": "跨境专供货源,支持一件代发,品牌代工定制logo,蓝牙5.3,TypeC/Lightning可选,CE/FCC/RoHS认证齐全"
+    "supplier_notes": "跨境专供货源,支持一件代发,品牌代工定制logo,蓝牙5.3,TypeC/Lightning可选,CE/FCC/RoHS认证齐全",
+    "item_ids": {
+      "global": "CBT4403265709",
+      "MLB": "MLB7683919590"
+    },
+    "listed_at": "2026-09-22T19:30:49"
   },
   {
     "id": "p15",
@@ -412,13 +443,18 @@
     "score": 75,
     "verdict": "go",
     "note": "可与摄像头/麦克风组合捆绑提升转化",
-    "status": "pending",
+    "status": "listed",
     "supplier_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=%E6%A1%8C%E9%9D%A2%E8%BF%B7%E4%BD%A0%E4%B8%89%E8%84%9A%E6%9E%B6+%E6%89%8B%E6%9C%BA+%E7%9B%B4%E6%92%AD",
     "supplier_name": "深圳魅力摄影器材制造有限公司(5年)/深圳科普罗塑胶制品有限公司(7年)",
     "supplier_price": 3.0,
     "moq": 1,
     "monthly_sales": "月销11000+件(GoPro款)/8396件(基础款)",
-    "supplier_notes": "支持一件代发,桌面迷你三脚架¥0.95起/GoPro运动相机三角架¥3.0/伸缩款¥4.5,1/4通用接口,跨境可选"
+    "supplier_notes": "支持一件代发,桌面迷你三脚架¥0.95起/GoPro运动相机三角架¥3.0/伸缩款¥4.5,1/4通用接口,跨境可选",
+    "item_ids": {
+      "global": "CBT4403141283",
+      "MLB": "MLB5274681879"
+    },
+    "listed_at": "2026-09-22T19:17:34"
   },
   {
     "id": "p16",
@@ -436,7 +472,7 @@
     "score": 75,
     "verdict": "watch",
     "note": "红海刚需，建议走差异化款(LED/花色)",
-    "status": "pending",
+    "status": "listed",
     "supplier_url": "https://s.1688.com/kq/-B3E8CEEFC7A3D2FDC9FEC7A3D2FDC6F7.html",
     "supplier_name": "义乌市益鸿宠物用品有限公司",
     "supplier_price": 6.65,
@@ -450,7 +486,12 @@
       "moq": "1件起",
       "monthly_sales": "1533笔",
       "supplier_notes": "11年老店,浙江义乌,加强款自动伸缩,成交稳定"
-    }
+    },
+    "item_ids": {
+      "global": "CBT4403164969",
+      "MLB": "MLB5274714641"
+    },
+    "listed_at": "2026-09-22T19:19:08"
   },
   {
     "id": "p17",
@@ -493,13 +534,18 @@
     "score": 70,
     "verdict": "watch",
     "note": "单笔利润最大¥163，但体积大物流成本高",
-    "status": "pending",
+    "status": "listed",
     "supplier_url": "https://detail.1688.com/offer/894529094883.html",
     "supplier_name": "运动相机配件专营(跨境同款)",
     "supplier_price": 45.0,
     "moq": 1,
     "monthly_sales": "17万+套(累计成交)",
-    "supplier_notes": "跨境出口专供,支持一件代发,50合1含三种自拍杆款可选(普通/海绵/黑色硅胶),兼容GoPro/运动相机,主要销售地区含南美"
+    "supplier_notes": "跨境出口专供,支持一件代发,50合1含三种自拍杆款可选(普通/海绵/黑色硅胶),兼容GoPro/运动相机,主要销售地区含南美",
+    "item_ids": {
+      "global": "CBT5302549802",
+      "MLB": "MLB5274686821"
+    },
+    "listed_at": "2026-09-22T19:20:34"
   },
   {
     "id": "p19",

@@ -8,8 +8,9 @@ export async function GET() {
       return NextResponse.json({ listings: [], message: '请先授权美客多账号' });
     }
 
+    const userId = process.env.MELI_USER_ID || '3650205937';
     const res = await fetch(
-      'https://api.mercadolibre.com/users/3650205937/items/search?limit=50&offset=0',
+      `https://api.mercadolibre.com/users/${userId}/items/search?limit=50&offset=0`,
       {
         headers: { Authorization: `Bearer ${token}` },
         next: { revalidate: 60 },
@@ -54,6 +55,7 @@ export async function GET() {
       }
     }
 
+    // Stats (listing-specific)
     const activeCount = allListings.filter(l => l.status === 'active').length;
     const totalStock = allListings.reduce((a, b) => a + b.available_quantity, 0);
     const totalSold = allListings.reduce((a, b) => a + b.sold_quantity, 0);

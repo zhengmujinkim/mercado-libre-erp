@@ -4,8 +4,8 @@ import { getAccessToken } from '@/lib/token-store';
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
-const SITE = 'MLB';
 const LOGISTIC = 'remote';
+const DEFAULT_SITE = 'MLB';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -30,13 +30,13 @@ async function apiCall(token: string, method: string, path: string, body?: unkno
 /**
  * CBT 商品下架（暂停）。
  * 已验证可行的流程：
- *  1. 读取商品，拿到 user_product_id（CBTUxxx -> Uxxx）
+ *  1. 读取商品，拿到 user_product_id（CBTUxxx -> Uxxx）和 site_id
  *  2. 重新挂载站点恢复映射：POST /global/user-products/{up} sites_to_sell
  *  3. 等待映射传播
  *  4. PUT /global/items/{item} status=paused
  *  5. 复查状态
  */
-async function pauseItem(token: string, itemId: string) {
+async function pauseItem(token: string, itemId: string, requestedSite?: string) {
   const log: any = { id: itemId };
 
   // 1) detalle del item
@@ -47,6 +47,9 @@ async function pauseItem(token: string, itemId: string) {
   const rawUp: string = detail.json?.user_product_id || '';
   const upId = rawUp.replace(/^CBTU/, 'U');
   log.before = detail.json?.status;
+
+  // Determine site: priority = requestedSite > item's site_id > DEFAULT_SITE
+  const SITE = requestedSite || detail.json?.site_id || DEFAULT_SITE;
 
   // Si ya está pausado/cerrado, nada que hacer
   if (detail.json?.status !== 'active') {
@@ -82,12 +85,12 @@ async function pauseItem(token: string, itemId: string) {
     }
 
     // 补救：父商品仍 active，说明本地子商品没关掉。
-    // 查 user-products v2 找到 MLM 本地 listing，精确关闭，下一轮再 readd+暂停。
+    // 查 user-products v2 找到本地 listing，精确关闭，下一轮再 readd+暂停。
     if (upId) {
       const up = await apiCall(token, 'GET', `/user-products/${upId}`, undefined, { 'X-API-Version': '2' });
       const sites: any[] = up.json?.sites || up.json?.site_statuses || [];
-      const mlm = sites.find((s) => s.site_id === SITE);
-      const localId: string | undefined = mlm?.listing_id || mlm?.item_id;
+      const targetSite = sites.find((s) => s.site_id === SITE);
+      const localId: string | undefined = targetSite?.listing_id || targetSite?.item_id;
       if (localId) {
         await apiCall(token, 'PUT', `/global/user-products/${upId}`, {
           listing_sites: [{ listing_id: localId, status: 'closed' }],
@@ -103,14 +106,18 @@ async function pauseItem(token: string, itemId: string) {
 
 export async function POST(req: NextRequest) {
   try {
-    const { ids } = await req.json();
+    const body = await req.json();
+    const { ids, site } = body;
     if (!Array.isArray(ids) || ids.length === 0) {
       return NextResponse.json({ success: false, error: 'Se requiere una lista de ids' }, { status: 400 });
     }
     const token = await getAccessToken();
+    if (!token) {
+      return NextResponse.json({ success: false, error: '请先授权美客多账号' }, { status: 401 });
+    }
     const results = [];
     for (const id of ids) {
-      results.push(await pauseItem(token, id));
+      results.push(await pauseItem(token, id, site));
     }
     return NextResponse.json({ success: true, results });
   } catch (e: any) {

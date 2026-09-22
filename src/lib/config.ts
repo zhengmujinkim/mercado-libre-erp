@@ -84,12 +84,12 @@ export function mlApiBase(country?: string): string {
   return 'https://api.mercadolibre.com';
 }
 
-// CBT OAuth credentials
+// CBT OAuth credentials (read from environment variables)
 export const MELI_CONFIG = {
-  clientId: '1167380097326946',
-  clientSecret: '8nMYwpYkIDjVjh4ihHsWAtlt8x4Xn7qG',
-  redirectUri: 'https://mercado-libre-erp.vercel.app/api/auth/callback',
+  get clientId() { return process.env.MERCADO_LIBRE_CLIENT_ID || ''; },
+  get clientSecret() { return process.env.MERCADO_LIBRE_CLIENT_SECRET || ''; },
+  redirectUri: process.env.MERCADO_LIBRE_REDIRECT_URI || 'https://mercado-libre-erp.vercel.app/api/auth/callback',
   apiBase: 'https://api.mercadolibre.com',
-  userId: '3650205937',
+  get userId() { return process.env.MELI_USER_ID || '3650205937'; },
   authUrl: 'https://global-selling.mercadolibre.com/authorization',
 };
