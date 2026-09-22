@@ -650,17 +650,18 @@
     },
     "listing_status": "pending",
     "source_note": "圣诞旺季刚需品，峰值销量6.85倍，10-12月黄金期",
-    "supplier_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=圣诞LED星星灯串装饰3米10灯USB电池",
-    "supplier_name": "临海市景硕灯饰有限公司",
-    "supplier_price": 4.28,
-    "moq": "",
-    "monthly_sales": "19894笔",
-    "supplier_notes": "该供应商成交量最高（19894笔），远超其他候选。¥4.28的定价符合3米10灯USB/电池两用星星灯串的完整产品价位（同供应商¥0.55的[7]应为单个星星配件单价）。价格合理，销量突出，为最佳批发货源。",
+    "supplier_url": "https://s.1688.com/kq/-4C4544CAA5B5AEB5C6B4AE.html",
+    "supplier_name": "临海市靖诚灯饰有限公司",
+    "supplier_price": 0.72,
+    "moq": null,
+    "monthly_sales": 5816,
+    "supplier_notes": "LED铜线灯串地摊热卖波波球铜丝灯创意圣诞节led灯串电池盒铜线灯",
     "item_ids": {
       "global": "CBT5304358486",
       "MLB": "MLB7685354134"
     },
-    "listed_at": "2026-09-23T00:00:01"
+    "listed_at": "2026-09-23T00:00:01",
+    "item_id": "CBT5304358486"
   },
   {
     "id": "p22",
@@ -671,7 +672,7 @@
     "subcategory": "厨房工具",
     "score": 89,
     "ml_category": "HOME",
-    "status": "pending",
+    "status": "listed",
     "estimated_price_usd": 24.99,
     "estimated_cost_cny": 3.5,
     "estimated_profit_usd": 14.34,
@@ -704,17 +705,20 @@
       "main": false,
       "gallery": 0
     },
-    "supplier_name": "阳江市江城区佰迪乐贸易商行",
-    "supplier_price": 3.5,
-    "supplier_url": "https://detail.1688.com/offer/607441946949.html",
-    "listing_status": "pending",
+    "supplier_name": "阳江市晟逸工贸有限公司",
+    "supplier_price": 1.71,
+    "supplier_url": "https://s.1688.com/kq/-B3F8B7BFCCD7B5B6B5B6BEDF.html",
+    "listing_status": "listed",
     "source_note": "高客单价$24.99，单件利润$15，套装送礼场景强",
-    "supplier_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=%E4%B8%8D%E9%94%88%E9%92%A2%E5%88%80%E5%85%B7%E5%A5%97%E8%A3%85+6%E4%BB%B6+%E5%88%80%E5%BA%A7",
-    "supplier_name": "阳江市十把刀工贸有限公司",
-    "supplier_price": 6.15,
-    "moq": "1套",
-    "monthly_sales": "成交11606笔",
-    "supplier_notes": "成交量远超其他候选（11606笔），价格¥6.15/套在合理批发区间内，供应商名称'十把刀'与刀具产品高度相关，阳江为中国刀剪之都，产地可靠。排除[4]¥0.63明显为单件配件价格，排除[8]¥49、[10]¥32价格偏高。"
+    "moq": null,
+    "monthly_sales": 5744,
+    "supplier_notes": "不锈钢刀具套装带刀套不锈钢不粘漆组合菜刀套装刀厨房家用水果刀",
+    "categoryId": "CBT456931",
+    "listed_at": "2026-09-23T00:50:04",
+    "item_ids": {
+      "global": "CBT5304638750",
+      "MLB": "MLB7685618016"
+    }
   },
   {
     "id": "p23",
@@ -759,17 +763,18 @@
     },
     "listing_status": "pending",
     "source_note": "高客单价$34.99，单件利润$18，助眠减压概念在拉美热度上升",
-    "supplier_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=加重玻璃珠填充毯",
-    "supplier_name": "贸重力毯加棉双面拼接毯子亚马逊批发源头工厂",
-    "supplier_price": 45.0,
-    "moq": "",
+    "supplier_url": "https://www.1688.com/chanpin/-D6D8C1A6CCBA.html",
+    "supplier_name": "永清县海宇玻璃微珠有限公司",
+    "supplier_price": 2,
+    "moq": null,
     "monthly_sales": "12500件",
-    "supplier_notes": "该供应商成交量高达12500件，远超其他候选，且名称明确为重力毯源头工厂。45元的单价符合7kg加重毯（玻璃珠成本+面料加工）的合理批发价逻辑，非配件异常低价。",
+    "supplier_notes": "喷砂玻璃微珠填充重力毯填充0.8-1毫米毛绒玩具填充眼罩玻璃珠",
     "item_ids": {
       "global": "CBT4404887841",
       "MLB": "MLB5276090987"
     },
-    "listed_at": "2026-09-23T00:04:20"
+    "listed_at": "2026-09-23T00:04:20",
+    "item_id": "CBT4404887841"
   },
   {
     "id": "p24",
@@ -780,7 +785,7 @@
     "subcategory": "家居生活",
     "score": 87,
     "ml_category": "HOME",
-    "status": "pending",
+    "status": "listed",
     "estimated_price_usd": 16.99,
     "estimated_cost_cny": 15.0,
     "estimated_profit_usd": 10.0,
@@ -814,12 +819,19 @@
     },
     "listing_status": "pending",
     "source_note": "全年刚需，环保概念加分，单件利润$10，复购带配件",
-    "supplier_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=不锈钢真空保温杯500ml",
-    "supplier_name": "永康市景泽工贸有限公司",
-    "supplier_price": 17.5,
-    "moq": "1个",
-    "monthly_sales": "8028笔",
-    "supplier_notes": "成交量断层第一（8028笔），远超其他选项。17.5元的单价符合304不锈钢双层真空保温杯的合理批发成本，有效避免了超低价（如10元左右）可能存在的材质缩水（如201冒充304）或保温性能不达标的风险，货源稳定可靠。"
+    "supplier_url": "https://s.1688.com/kq/-D5E6BFD5B1A3CEC2B1AD3530306D6C.html",
+    "supplier_name": "永康市秉昱五金制品厂",
+    "supplier_price": 10,
+    "moq": null,
+    "monthly_sales": 877,
+    "supplier_notes": "新款大容量吸管保温杯户外便携真空双饮杯家用双层316不锈钢水杯",
+    "categoryId": "CBT412517",
+    "item_ids": {
+      "global": "CBT5304483672",
+      "MLB": "MLB5276153233"
+    },
+    "listed_at": "2026-09-23T00:22:19",
+    "item_id": "CBT5304483672"
   },
   {
     "id": "p25",
@@ -864,17 +876,18 @@
     },
     "listing_status": "pending",
     "source_note": "极轻15g运费极低，利润率72%+，钛钢不退色是核心卖点",
-    "supplier_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=简约钛钢锁骨项链",
-    "supplier_name": "东莞川泽饰品有限公司",
-    "supplier_price": 1.4,
-    "moq": "",
-    "monthly_sales": "720笔",
-    "supplier_notes": "东莞是钛钢饰品的核心产业带，该供应商作为专业饰品厂，材质和工艺更有保障。1.4元的价格符合316L钛钢简约素链的正常批发价，有效排除了价格过低（如0.76元）可能为配件或极细链的风险，且成交量稳定，综合性价比最优。",
+    "supplier_url": "https://s.1688.com/kq/-EED1B8D6CFEEC1B4CBF8B9C7.html",
+    "supplier_name": "东莞市晨珲饰品有限公司",
+    "supplier_price": 0.5,
+    "moq": null,
+    "monthly_sales": 1623,
+    "supplier_notes": "工厂小额批发不锈钢扁十字链 电镀18kO字链 DIY项链 首饰服饰配件",
     "item_ids": {
       "global": "CBT5304398164",
       "MLB": "MLB5276111045"
     },
-    "listed_at": "2026-09-23T00:07:58"
+    "listed_at": "2026-09-23T00:07:58",
+    "item_id": "CBT5304398164"
   },
   {
     "id": "p26",
@@ -919,17 +932,18 @@
     },
     "listing_status": "pending",
     "source_note": "套装提升客单价，磁扣设计差异化，竞品少",
-    "supplier_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=%E5%A4%9A%E5%B1%82%E5%8F%A0%E6%88%B4%E9%92%9B%E9%92%A2%E6%89%8B%E9%93%BE%E5%A5%97%E8%A3%85",
-    "supplier_name": "义乌市百禄饰品有限公司",
-    "supplier_price": 5.4,
-    "moq": "",
-    "monthly_sales": "成交1764件",
-    "supplier_notes": "该供应商成交1764件，是所有候选中唯一有明确销量数据的，销量领先。¥5.4/套的价格对于3-5条装钛钢手链套装属于合理区间（折合约¥1-1.8/条），排除异常低价（如¥1.24疑似单条价格）和偏高价格。义乌市百禄饰品有限公司同时出现¥9.8和¥5.4两个价位，¥5.4更可能是套装批发价。",
+    "supplier_url": "https://s.1688.com/kq/-EED1B8D6CCD7D7B0.html?beginPage=2",
+    "supplier_name": "义乌市楠蝶电子商务商行",
+    "supplier_price": 3.5,
+    "moq": null,
+    "monthly_sales": 424,
+    "supplier_notes": "儿童项链可爱卡通独角兽儿童首饰套装小女孩项链手链饰品宝宝配饰",
     "item_ids": {
-      "global": "CBT4404783497",
-      "MLB": "MLB5275968609"
+      "global": "CBT5304392838",
+      "MLB": "MLB7685440856"
     },
-    "listed_at": "2026-09-22T23:46:51"
+    "listed_at": "2026-09-23T00:10:23",
+    "item_id": "CBT5304392838"
   },
   {
     "id": "p27",
@@ -940,7 +954,7 @@
     "subcategory": "厨房工具",
     "score": 84,
     "ml_category": "HOME",
-    "status": "pending",
+    "status": "listed",
     "estimated_price_usd": 12.99,
     "estimated_cost_cny": 10.0,
     "estimated_profit_usd": 8.0,
@@ -974,12 +988,18 @@
     },
     "listing_status": "pending",
     "source_note": "家庭刚需，硅胶+木柄组合颜值高，不伤锅是核心卖点",
-    "supplier_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=%E9%A3%9F%E5%93%81%E7%BA%A7%E7%A1%85%E8%83%B6%E9%93%B2%E5%8B%89%E5%A5%97%E8%A3%856%E4%BB%B6%E5%A5%97%E6%9C%A8%E6%9F%84",
-    "supplier_name": "揭阳市德佰五金塑胶制品有限公司",
-    "supplier_price": 15.0,
-    "moq": "1套",
-    "monthly_sales": "待验证",
-    "supplier_notes": "揭阳为知名五金塑胶制品产地，该供应商名称含'五金塑胶'与硅胶制品关联度高。¥15.0/套的价格符合6件套食品级硅胶厨具（木柄）的合理批发价位，排除了单价过低的配件报价（如¥0.95、¥1.62等明显为单件价格）和未知供应商。"
+    "supplier_url": "https://www.1688.com/market/-B3F8BEDF36BCFECCD7.html",
+    "supplier_name": "阳江市绿之园工贸有限公司",
+    "supplier_price": 1.62,
+    "moq": null,
+    "monthly_sales": "94个",
+    "supplier_notes": "木柄硅胶厨具套装北欧风格，品牌：绿之源",
+    "item_ids": {
+      "global": "CBT4404925967",
+      "MLB": "MLB7685454682"
+    },
+    "listed_at": "2026-09-23T00:12:15",
+    "item_id": "CBT4404925967"
   },
   {
     "id": "p28",
@@ -990,7 +1010,7 @@
     "subcategory": "运动健身",
     "score": 86,
     "ml_category": "SPORTS",
-    "status": "pending",
+    "status": "listed",
     "estimated_price_usd": 19.99,
     "estimated_cost_cny": 25.0,
     "estimated_profit_usd": 11.5,
@@ -1024,12 +1044,18 @@
     },
     "listing_status": "pending",
     "source_note": "健身刚需品，TPE材质环保卖点强，利润空间大",
-    "supplier_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=TPE%E7%91%9C%E4%BC%BD%E5%9E%AB6mm%E5%8A%A0%E5%8E%9A%E5%8F%8C%E9%9D%A2%E9%98%B2%E6%BB%91%E5%90%AB%E8%83%8C%E5%B8%A6",
-    "supplier_name": "江西冠驰体育用品有限公司",
-    "supplier_price": 18.81,
-    "moq": "1条",
-    "monthly_sales": "25713笔",
-    "supplier_notes": "成交量高达25713笔，为候选列表中成交量第二高的供应商；价格¥18.81处于合理区间（非配件低价也非虚高），体育用品有限公司专业对口，性价比最优。"
+    "supplier_url": "https://tw.1688.com/item/-74706520B7C0D5F0B5E6.html",
+    "supplier_name": "常州市漢昌緩沖材料有限公司",
+    "supplier_price": 1.6,
+    "moq": null,
+    "monthly_sales": 49,
+    "supplier_notes": "廠家直供TPE瑜伽墊材料 彩色TPE泡棉高彈防震隔音tpe片材卷材",
+    "item_ids": {
+      "global": "CBT4404939697",
+      "MLB": "MLB7685445488"
+    },
+    "listed_at": "2026-09-23T00:14:03",
+    "item_id": "CBT4404939697"
   },
   {
     "id": "p29",
@@ -1040,7 +1066,7 @@
     "subcategory": "汽车装饰",
     "score": 85,
     "ml_category": "VEHICLES",
-    "status": "pending",
+    "status": "listed",
     "estimated_price_usd": 8.99,
     "estimated_cost_cny": 5.0,
     "estimated_profit_usd": 5.8,
@@ -1074,12 +1100,19 @@
     },
     "listing_status": "pending",
     "source_note": "超轻45g，男性市场高需求，复购率高（需替换香薰片）",
-    "supplier_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=%E8%BD%A6%E8%BD%BD%E9%A6%99%E8%96%B0%E5%A4%B9%E5%87%BA%E9%A3%8E%E5%8F%A3",
-    "supplier_name": "义乌市巨扬工艺品有限公司",
-    "supplier_price": 2.95,
-    "moq": "",
-    "monthly_sales": "成交388725个",
-    "supplier_notes": "该供应商成交量高达388725个，在所有候选中排名第二；价格¥2.95符合合金外壳+精油棉芯出风口香薰夹的合理成本区间（排除¥0.18/¥0.27等疑似配件单价的异常低价）。综合销量与价格，为最佳批发货源。"
+    "supplier_url": "https://s.1688.com/kq/-B3F6B7E7BFDACFE3CBAEC6FBB3B5BFD5B5F7.html",
+    "supplier_name": "中山市横栏镇森朗五金制品厂",
+    "supplier_price": 0.16,
+    "moq": null,
+    "monthly_sales": 1,
+    "supplier_notes": "车载香薰金属夹硅胶夹汽车空调口香水尾夹出风口香水夹子配件厂家; 2年; 中山市",
+    "listed_at": "2026-09-23T00:24:29",
+    "categoryId": "CBT436433",
+    "item_ids": {
+      "global": "CBT4404995203",
+      "MLB": "MLB7685484252"
+    },
+    "item_id": "CBT4404995203"
   },
   {
     "id": "p30",
@@ -1090,7 +1123,7 @@
     "subcategory": "汽车装饰",
     "score": 83,
     "ml_category": "VEHICLES",
-    "status": "pending",
+    "status": "listed",
     "estimated_price_usd": 10.99,
     "estimated_cost_cny": 8.0,
     "estimated_profit_usd": 7.0,
@@ -1122,13 +1155,19 @@
       "main": false,
       "gallery": 0
     },
-    "listing_status": "pending",
+    "listing_status": "listed",
     "source_note": "解决痛点型产品，座椅缝隙掉东西是通用痛点，竞品少",
     "supplier_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=汽车座椅缝隙收纳盒",
     "supplier_name": "广州威杰斯汽车用品有限公司",
     "supplier_price": 5.9,
     "moq": "",
     "monthly_sales": "待验证",
-    "supplier_notes": "产品要求PU皮革+ABS材质，排除毛毡材质(12)和五金类(9)。威杰斯为专业汽车用品公司且在候选中多次出现，推测为源头或大批发商。5.9元价格符合PU+ABS常规批发价，排除过低(3)及过高(13)选项。"
+    "supplier_notes": "产品要求PU皮革+ABS材质，排除毛毡材质(12)和五金类(9)。威杰斯为专业汽车用品公司且在候选中多次出现，推测为源头或大批发商。5.9元价格符合PU+ABS常规批发价，排除过低(3)及过高(13)选项。",
+    "listed_at": "2026-09-23T00:50:04",
+    "categoryId": "CBT436433",
+    "item_ids": {
+      "global": "CBT4405149647",
+      "MLB": "MLB5276301987"
+    }
   }
 ]
