@@ -2,6 +2,10 @@
 // Persistence order: Vercel Edge Config (persistent) -> memory cache -> env vars
 
 const USER_ID = '3650205937';
+const FALLBACK_CLIENT_ID = '1167380097326946';
+const FALLBACK_CLIENT_SECRET = '8nMYwpYkIDjVjh4ihHsWAtlt8x4Xn7qG';
+const FALLBACK_REFRESH_TOKEN = 'TG-6ab2520235e7eb0001c61224-3650205937';
+const FALLBACK_ACCESS_TOKEN = 'APP_USR-1167380097326946-092206-4c4d46d90cc00aa531f837ab54a848f7-3650205937';
 
 export interface StoredTokens {
   access_token: string;
@@ -70,8 +74,8 @@ async function edgeConfigRead(): Promise<StoredTokens | null> {
 
 // --- Env var helpers (fallback when Edge Config not available) ---
 function getTokensFromEnv(): StoredTokens | null {
-  const at = process.env.MELI_ACCESS_TOKEN;
-  const rt = process.env.MELI_REFRESH_TOKEN;
+  const at = process.env.MELI_ACCESS_TOKEN || FALLBACK_ACCESS_TOKEN;
+  const rt = process.env.MELI_REFRESH_TOKEN || FALLBACK_REFRESH_TOKEN;
   if (!at || !rt) return null;
   const expiresAt = parseInt(process.env.MELI_TOKEN_EXPIRES_AT || '0', 10);
   return {
@@ -139,8 +143,8 @@ export async function refreshAccessToken(): Promise<StoredTokens | null> {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({
         grant_type: 'refresh_token',
-        client_id: process.env.MERCADO_LIBRE_CLIENT_ID || '1167380097326946',
-        client_secret: process.env.MERCADO_LIBRE_CLIENT_SECRET || '8nMYwpYkIDjVjh4ihHsWAtlt8x4Xn7qG',
+        client_id: process.env.MERCADO_LIBRE_CLIENT_ID || FALLBACK_CLIENT_ID,
+        client_secret: process.env.MERCADO_LIBRE_CLIENT_SECRET || FALLBACK_CLIENT_SECRET,
         refresh_token: rt,
       }),
     });
