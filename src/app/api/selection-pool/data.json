@@ -114,9 +114,25 @@
     "moq": 1,
     "monthly_sales": "1100+笔(成交)",
     "supplier_notes": "跨境出口专供,支持一件代发,免驱即插即用,CM108芯片,铝合金外壳,重量仅50g,多种接口可选(USB/Type-C)",
+    "variant": {
+      "color": "black",
+      "color_cn": "黑色",
+      "interface": "USB",
+      "material": "铝合金",
+      "description": "黑色铝合金USB接口外置声卡(CM108芯片)"
+    },
     "item_ids": {
       "BR": "MLB7681027740"
-    }
+    },
+    "images": [
+      "https://http2.mlstatic.com/D_627782-CBT116598645824_092026-O.jpg",
+      "https://http2.mlstatic.com/D_746551-CBT118108364469_092026-O.jpg",
+      "https://http2.mlstatic.com/D_995066-CBT116598646574_092026-O.jpg",
+      "https://http2.mlstatic.com/D_967164-CBT118108365137_092026-O.jpg",
+      "https://http2.mlstatic.com/D_669026-CBT118108304947_092026-O.jpg"
+    ],
+    "images_fixed_at": "2026-09-23T12:08:45",
+    "images_fixed_note": "替换有中文水印的供应商图片为Alibaba国际站干净产品图(无水印无文字),5张白底产品图"
   },
   {
     "id": "p05",
@@ -425,7 +441,16 @@
       "global": "CBT4403265709",
       "MLB": "MLB7683919590"
     },
-    "listed_at": "2026-09-22T19:30:49"
+    "listed_at": "2026-09-22T19:30:49",
+    "images": [
+      "https://s.coze.cn/image/9VI3fP98IuQ/",
+      "https://s.coze.cn/image/9UWZLk9VBYs/",
+      "https://s.coze.cn/image/20744ETt0kU/",
+      "https://s.coze.cn/image/01AHcw4C2jU/",
+      "https://s.coze.cn/image/lg8tLq2vVgM/"
+    ],
+    "images_fixed_at": "2026-09-23T12:27:53",
+    "images_fixed_note": "统一Type-C接口无线领夹麦克风（5张>=600px）"
   },
   {
     "id": "p15",
@@ -454,7 +479,16 @@
       "global": "CBT4403141283",
       "MLB": "MLB5274681879"
     },
-    "listed_at": "2026-09-22T19:17:34"
+    "listed_at": "2026-09-22T19:17:34",
+    "images": [
+      "https://s.coze.cn/image/6iXJ4j6dgF0/",
+      "https://s.coze.cn/image/vf6Kh7ugRMo/",
+      "https://s.coze.cn/image/d0nmjd3PEqg/",
+      "https://s.coze.cn/image/5WnAZ5yOM9Q/",
+      "https://s.coze.cn/image/yYGfo4_PKtc/"
+    ],
+    "images_fixed_at": "2026-09-23T12:26:16",
+    "images_fixed_note": "桌面迷你三脚架（黑色款，统一款式）"
   },
   {
     "id": "p16",
@@ -491,7 +525,17 @@
       "global": "CBT4403164969",
       "MLB": "MLB5274714641"
     },
-    "listed_at": "2026-09-22T19:19:08"
+    "listed_at": "2026-09-22T19:19:08",
+    "images": [
+      "https://cbu01.alicdn.com/img/ibank/O1CN01jx4D3S1TXaSUGqF3G_!!984092392-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01TtXZr91TXaSTyzqkw_!!984092392-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN019Pd7Hb1TXaSUrd9G0_!!984092392-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01TD35FK1TXaSSO4IgM_!!984092392-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN010UVd7J1TXaSThethC_!!984092392-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN015UDjk91TXaSUfx047_!!984092392-0-cib.jpg"
+    ],
+    "images_fixed_at": "2026-09-23T10:45:56",
+    "images_fixed_note": "统一黑色可伸缩牵引绳 6张"
   },
   {
     "id": "p17",
@@ -507,16 +551,28 @@
     "margin": 59.7,
     "competitors": 10000,
     "score": 70,
-    "verdict": "skip",
+    "verdict": "pass",
     "note": "10000+竞品红海，需差异化包装/颜色",
-    "status": "pending",
+    "status": "listed",
     "supplier_url": "https://s.1688.com/kq/-C2C3D0D0B7D6D7B0C6BFCCD7D7B0.html",
     "supplier_name": "聚创实业(深圳)有限公司(硅胶分装瓶套装)",
     "supplier_price": "¥1.71/个起",
     "moq": "2个起批",
     "monthly_sales": "成交73085件,7年厂家",
     "supplier_notes": "硅胶材质双层密封防漏,洗发水化妆品乳液分装,跨境专供",
-    "supplier_actual_price": 1.71
+    "supplier_actual_price": 1.71,
+    "item_ids": {
+      "MLB": "MLB7690535136"
+    },
+    "listed_at": "2026-09-23T19:43:53",
+    "global": "CBT4411818969",
+    "images": [
+      "https://s.coze.cn/image/N-3HWED7SPI/",
+      "https://s.coze.cn/image/rLFE7QMUdjo/",
+      "https://s.coze.cn/image/_Bo6TjlaV4U/",
+      "https://s.coze.cn/image/cUmoZ1nB-b4/",
+      "https://s.coze.cn/image/2FcJYglOooY/"
+    ]
   },
   {
     "id": "p18",
@@ -545,7 +601,17 @@
       "global": "CBT5302549802",
       "MLB": "MLB5274686821"
     },
-    "listed_at": "2026-09-22T19:20:34"
+    "listed_at": "2026-09-22T19:20:34",
+    "images": [
+      "https://s.alicdn.com/@sc04/kf/Hc7c7adfae5e14df79cb5cc5510e44514y.png",
+      "https://s.alicdn.com/@sc04/kf/Hafa0045f976347ecbf2cbab2b83ad26c5.jpg",
+      "https://s.alicdn.com/@sc04/kf/H29565b6344d840e19cabcb2bc96d1375u.jpg",
+      "https://s.alicdn.com/@sc04/kf/Hb488007085194e939d1a9e546abe4b71U.jpg",
+      "https://s.alicdn.com/@sc04/kf/Hcd8c50050619457c9952c6edc07160505.jpg",
+      "https://s.alicdn.com/@sc04/kf/Hfaf6c8b109eb440da2016404fec54ac0l.jpg"
+    ],
+    "images_fixed_at": "2026-09-23T12:26:16",
+    "images_fixed_note": "50合1运动相机配件套装（统一套装图片）"
   },
   {
     "id": "p19",
@@ -561,15 +627,26 @@
     "margin": 18.7,
     "competitors": 80,
     "score": 70,
-    "verdict": "skip",
+    "verdict": "pass",
     "note": "品牌竞争激烈(GoPro/SJCAM)，利润率偏低",
-    "status": "pending",
+    "status": "listed",
     "supplier_url": "https://detail.1688.com/offer/782116074160.html",
     "supplier_name": "深圳市龙岗区德泰美电子厂(10年老厂)",
     "supplier_price": 135.0,
     "moq": 2,
     "monthly_sales": "成交14万+笔(跨店)",
-    "supplier_notes": "跨境出口专供,支持一件代发,V3型号索尼IMX179D镜头+4K+WiFi+防抖+30米防水,2.0寸双彩屏,TYPE-C接口,中性品牌可定制logo,多配件套装可选(64G/128G卡/备用电池等),基础款¥135起"
+    "supplier_notes": "跨境出口专供,支持一件代发,V3型号索尼IMX179D镜头+4K+WiFi+防抖+30米防水,2.0寸双彩屏,TYPE-C接口,中性品牌可定制logo,多配件套装可选(64G/128G卡/备用电池等),基础款¥135起",
+    "item_ids": {
+      "MLB": "MLB7690526040"
+    },
+    "listed_at": "2026-09-23T19:43:53",
+    "global": "CBT4411832187",
+    "images": [
+      "https://s.coze.cn/image/Nwi_Q4ckoTg/",
+      "https://s.coze.cn/image/h0TrlhlmopU/",
+      "https://s.coze.cn/image/Z70dGl3lblg/",
+      "https://s.coze.cn/image/29pbmBFpqpQ/"
+    ]
   },
   {
     "id": "p20",
@@ -585,9 +662,9 @@
     "margin": 65.8,
     "competitors": 250,
     "score": 65,
-    "verdict": "skip",
+    "verdict": "pass",
     "note": "体积偏大物流贵，实际运费可能超¥6",
-    "status": "pending",
+    "status": "listed",
     "supplier_url": "https://s.1688.com/kq/-B3E8CEEFD2FBCBAEAEC1F7.html",
     "supplier_name": "金华市豪庭甄选宠物用品有限公司",
     "supplier_price": 11.0,
@@ -601,7 +678,19 @@
       "moq": "1件起",
       "monthly_sales": "124笔",
       "supplier_notes": "2年店,浙江金华,跨境猫咪饮水机,自动循环流动静音"
-    }
+    },
+    "item_ids": {
+      "MLB": "MLB7690544266"
+    },
+    "listed_at": "2026-09-23T19:43:53",
+    "global": "CBT4411819255",
+    "images": [
+      "https://s.coze.cn/image/lG2EDb2MeFU/",
+      "https://s.coze.cn/image/GOEysKqMgI4/",
+      "https://s.coze.cn/image/QnYa04BCOos/",
+      "https://s.coze.cn/image/xP5w_s9q9hk/",
+      "https://s.coze.cn/image/grZr548HIYs/"
+    ]
   },
   {
     "id": "p21",
@@ -650,12 +739,12 @@
     },
     "listing_status": "pending",
     "source_note": "圣诞旺季刚需品，峰值销量6.85倍，10-12月黄金期",
-    "supplier_url": "https://s.1688.com/kq/-4C4544CAA5B5AEB5C6B4AE.html",
-    "supplier_name": "临海市靖诚灯饰有限公司",
-    "supplier_price": 0.72,
-    "moq": null,
+    "supplier_url": "https://tw.1688.com/item/-6C6564B5C6B4AE20757362.html",
+    "supplier_name": "臨海茱萸電子商務有限公司",
+    "supplier_price": 1.2,
+    "moq": "1件起",
     "monthly_sales": 5816,
-    "supplier_notes": "LED铜线灯串地摊热卖波波球铜丝灯创意圣诞节led灯串电池盒铜线灯",
+    "supplier_notes": "搜索词:圣诞LED星星灯串 USB, 平台:1688, 发货:",
     "item_ids": {
       "global": "CBT5304358486",
       "MLB": "MLB7685354134"
@@ -763,12 +852,12 @@
     },
     "listing_status": "pending",
     "source_note": "高客单价$34.99，单件利润$18，助眠减压概念在拉美热度上升",
-    "supplier_url": "https://www.1688.com/chanpin/-D6D8C1A6CCBA.html",
-    "supplier_name": "永清县海宇玻璃微珠有限公司",
-    "supplier_price": 2,
-    "moq": null,
+    "supplier_url": "https://chinese.alibaba.com/g/gravity-blanket.html",
+    "supplier_name": "Dongyang Jianhe Industry And Trade Co., Ltd.",
+    "supplier_price": 17.99,
+    "moq": "100件起",
     "monthly_sales": "12500件",
-    "supplier_notes": "喷砂玻璃微珠填充重力毯填充0.8-1毫米毛绒玩具填充眼罩玻璃珠",
+    "supplier_notes": "搜索词:加重毯 玻璃珠 重力毯, 平台:Alibaba, 发货:CN",
     "item_ids": {
       "global": "CBT4404887841",
       "MLB": "MLB5276090987"
@@ -1028,11 +1117,12 @@
     ],
     "description": "6mm加厚TPE瑜伽垫，双面防滑纹理，环保无异味，含背带",
     "images": [
-      "https://s.coze.cn/image/JwEDPRknxns/",
-      "https://s.coze.cn/image/F59b6UrByZE/",
-      "https://s.coze.cn/image/Qvj5CGrwgvY/",
-      "https://s.coze.cn/image/eNyuiabjBAs/",
-      "https://s.coze.cn/image/uyOwB_bUun4/"
+      "https://s.coze.cn/image/nWXgeyewwAk/",
+      "https://s.coze.cn/image/q_YOu8eSWdM/",
+      "https://s.coze.cn/image/gg-2Mgs68nM/",
+      "https://s.coze.cn/image/jjZjyAes00E/",
+      "https://s.coze.cn/image/dUAqhVifm9s/",
+      "https://s.coze.cn/image/2JfT9IcGKR4/"
     ],
     "target_market": [
       "MLB",
@@ -1055,7 +1145,9 @@
       "MLB": "MLB7685445488"
     },
     "listed_at": "2026-09-23T00:14:03",
-    "item_id": "CBT4404939697"
+    "item_id": "CBT4404939697",
+    "images_fixed_at": "2026-09-23T12:26:16",
+    "images_fixed_note": "黑色/深灰色TPE瑜伽垫（统一颜色）"
   },
   {
     "id": "p29",
@@ -1169,5 +1261,577 @@
       "global": "CBT4405149647",
       "MLB": "MLB5276301987"
     }
+  },
+  {
+    "id": "p31",
+    "rank": 31,
+    "name": "宠物LED发光项圈（USB充电）",
+    "name_es": "Collar LED Luminoso para Mascotas con Carga USB",
+    "category": "pets",
+    "categoryLabel": "宠物牵引",
+    "categoryId": "CBT370459",
+    "price1688": 2.9,
+    "totalCost": 8.9,
+    "sellUSD": 8.99,
+    "netProfit": 75.9,
+    "margin": 67.9,
+    "competitors": 300,
+    "score": 8.4,
+    "verdict": "pass",
+    "note": "超轻30g运费极低，利润率75.9%全场最高，USB充电+夜间防丢是刚需痛点",
+    "status": "listed",
+    "supplier_url": "https://s.1688.com/kq/-B3E8CEEFCFEEC8A66C6564.html",
+    "supplier_name": "东莞市奕辰服饰有限公司",
+    "supplier_price": 2.9,
+    "moq": "1件起",
+    "monthly_sales": "1673笔",
+    "supplier_notes": "8年店,广东东莞,USB充电发光夜光宠物项圈,大中小型犬通用",
+    "weight_g": 30,
+    "description": "USB充电LED发光宠物项圈，可调节长度，夜间遛狗安全防丢，防水设计，多色可选",
+    "images": [
+      "https://s.coze.cn/image/2JoEa4RwT8U/",
+      "https://s.coze.cn/image/udkTAObseHU/",
+      "https://s.coze.cn/image/gw87PKIgB0o/",
+      "https://s.coze.cn/image/TS8SKXL9Tw0/",
+      "https://s.coze.cn/image/cTliEq23Hb4/"
+    ],
+    "variant": {
+      "color": "blue",
+      "color_cn": "蓝色",
+      "description": "蓝色USB充电LED发光项圈，可调节长度65cm"
+    },
+    "target_market": [
+      "MLB",
+      "MLM"
+    ],
+    "tags": [
+      "pets",
+      "LED",
+      "collar",
+      "USB_charging",
+      "safety",
+      "lightweight"
+    ],
+    "trend": "growing",
+    "source_note": "夜间遛狗安全刚需，超轻30g运费极低，竞品仅300个蓝海市场",
+    "item_ids": {
+      "global": "CBT5311441748",
+      "MLB": "MLB5280891133"
+    },
+    "listed_at": "2026-09-23T19:51:25",
+    "global": "CBT5311441748",
+    "mlb_id": "MLB5280891133"
+  },
+  {
+    "id": "p32",
+    "rank": 32,
+    "name": "无热卷发棒套装（3根装）",
+    "name_es": "Set Rizadores Sin Calor 3 Piezas",
+    "category": "beauty",
+    "categoryLabel": "美发工具",
+    "categoryId": "CBT389307",
+    "price1688": 1.79,
+    "totalCost": 7.79,
+    "sellUSD": 7.99,
+    "netProfit": 77.4,
+    "margin": 62.1,
+    "competitors": 200,
+    "score": 8.1,
+    "verdict": "pass",
+    "note": "TikTok爆款，无需加热的健康护发概念，利润率77.4%，采购价仅¥1.79",
+    "status": "listed",
+    "supplier_url": "https://s.1688.com/kq/-CEE0C8C8BED2B7A2B0F4.html",
+    "supplier_name": "义乌市洽迅电子商务有限公司",
+    "supplier_price": 1.79,
+    "moq": "10根起批",
+    "monthly_sales": "3376笔",
+    "supplier_notes": "11年老店,浙江义乌,跨境新款无热卷发棒,加粗3cm大波浪,懒人睡眠卷发",
+    "weight_g": 80,
+    "description": "3根装无热卷发棒，加粗3cm大波浪设计，橡胶材质不伤发，睡眠懒人卷发神器",
+    "images": [
+      "https://s.coze.cn/image/YWwqjFZ8YQY/",
+      "https://s.coze.cn/image/Nq3VGY8xZ3c/",
+      "https://s.coze.cn/image/AWp3KDO9h3E/",
+      "https://s.coze.cn/image/UvmJHD2ucFo/"
+    ],
+    "variant": {
+      "color": "pink",
+      "color_cn": "粉红色",
+      "description": "粉红色丝带无热卷发棒3根装"
+    },
+    "target_market": [
+      "MLB",
+      "MLM"
+    ],
+    "tags": [
+      "beauty",
+      "hair",
+      "heatless",
+      "curler",
+      "tiktok_trend",
+      "lightweight"
+    ],
+    "trend": "hot",
+    "source_note": "TikTok/社交媒体爆款，无需加热的健康护发趋势，采购价极低",
+    "item_ids": {
+      "global": "CBT4411735043",
+      "MLB": "MLB5280761917"
+    },
+    "listed_at": "2026-09-23T19:43:53",
+    "global": "CBT4411735043",
+    "mlb_id": "MLB5280645079"
+  },
+  {
+    "id": "p33",
+    "rank": 33,
+    "name": "电动磨脚器（充电款）",
+    "name_es": "Lima de Pies Eléctrica Recargable",
+    "category": "beauty",
+    "categoryLabel": "足部护理",
+    "categoryId": "CBT389307",
+    "price1688": 8.0,
+    "totalCost": 14.0,
+    "sellUSD": 9.99,
+    "netProfit": 63.8,
+    "margin": 43.0,
+    "competitors": 100,
+    "score": 7.8,
+    "verdict": "pass",
+    "note": "足部护理刚需品，充电款+数显差异化，竞品仅100个蓝海市场",
+    "status": "listed",
+    "supplier_url": "https://s.1688.com/kq/-B5E7B6AFC4A5BDC5C6F7.html",
+    "supplier_name": "温州云压电子科技有限公司",
+    "supplier_price": 8.0,
+    "moq": "2件起",
+    "monthly_sales": "971笔",
+    "supplier_notes": "3年店,浙江温州,电动磨脚器充电款,去死皮修脚器,USB充电",
+    "weight_g": 80,
+    "description": "USB充电电动磨脚器，可替换磨砂磨头，多档可调，去死皮老茧，足部嫩滑护理",
+    "images": [
+      "https://s.coze.cn/image/kfwQvrMPZlQ/",
+      "https://s.coze.cn/image/eBiL8rtagfc/",
+      "https://s.coze.cn/image/OidAmq288hQ/",
+      "https://s.coze.cn/image/ULOimdWk9Yo/",
+      "https://s.coze.cn/image/djigYHeOWZ8/"
+    ],
+    "variant": {
+      "color": "white",
+      "color_cn": "白色",
+      "description": "白色USB充电电动磨脚器"
+    },
+    "target_market": [
+      "MLB",
+      "MLM"
+    ],
+    "tags": [
+      "beauty",
+      "foot_care",
+      "electric",
+      "rechargeable",
+      "pedicure"
+    ],
+    "trend": "evergreen",
+    "source_note": "足部护理刚需品，竞品仅100个蓝海，80g轻量物流友好",
+    "item_ids": {
+      "global": "CBT5311580742",
+      "MLB": "MLB5280783217"
+    },
+    "listed_at": "2026-09-23T19:43:53",
+    "global": "CBT5311580742"
+  },
+  {
+    "id": "p34",
+    "rank": 34,
+    "name": "宠物慢食碗（防噎设计）",
+    "name_es": "Comedero Lento Antiahogo para Mascotas",
+    "category": "pets",
+    "categoryLabel": "宠物餐具",
+    "categoryId": "CBT458038",
+    "price1688": 3.14,
+    "totalCost": 9.14,
+    "sellUSD": 7.99,
+    "netProfit": 57.4,
+    "margin": 42.5,
+    "competitors": 500,
+    "score": 7.6,
+    "verdict": "pass",
+    "note": "宠物防噎健康概念，硅胶材质安全耐用，150g轻量物流友好",
+    "status": "listed",
+    "supplier_url": "https://s.1688.com/kq/-B3E8CEEFC2FDCAB3CDEB.html",
+    "supplier_name": "漳州市芗城区崇文宠物用品有限公司",
+    "supplier_price": 3.14,
+    "moq": "2件起",
+    "monthly_sales": "4959笔",
+    "supplier_notes": "跨境宠物慢食碗,防噎缓食设计,彩色实用用品,狗碗猫碗",
+    "weight_g": 150,
+    "description": "宠物慢食碗防噎设计，食品级塑料材质，骨骼凸起造型减缓进食速度，防打翻底座",
+    "images": [
+      "https://s.coze.cn/image/TrJVtAj_hd0/",
+      "https://s.coze.cn/image/T_ghAT1hgq0/",
+      "https://s.coze.cn/image/qAFLqH1ebnk/",
+      "https://s.coze.cn/image/2QlcvvA9fWo/"
+    ],
+    "variant": {
+      "color": "blue",
+      "color_cn": "蓝色",
+      "description": "蓝色防噎慢食碗"
+    },
+    "target_market": [
+      "MLB",
+      "MLM"
+    ],
+    "tags": [
+      "pets",
+      "slow_feeder",
+      "anti_choke",
+      "bowl",
+      "health"
+    ],
+    "trend": "growing",
+    "source_note": "宠物健康趋势品，防噎设计解决痛点，月销4959笔",
+    "item_ids": {
+      "global": "CBT4411804209",
+      "MLB": "MLB7690513436"
+    },
+    "listed_at": "2026-09-23T19:43:53",
+    "global": "CBT4411804209"
+  },
+  {
+    "id": "p35",
+    "rank": 35,
+    "name": "磁吸充电数据线（6合1）",
+    "name_es": "Cable de Carga Magnético 6 en 1",
+    "category": "electronics",
+    "categoryLabel": "数据线",
+    "categoryId": "CBT1659",
+    "price1688": 3.0,
+    "totalCost": 9.0,
+    "sellUSD": 7.99,
+    "netProfit": 63.8,
+    "margin": 43.0,
+    "competitors": 300,
+    "score": 7.5,
+    "verdict": "pass",
+    "note": "超轻30g运费极低，6合1多接口适配性强，利润率63.8%",
+    "status": "listed",
+    "supplier_url": "https://s.1688.com/kq/-B4C5CECBD6CFD0CFDFCAFDDED1C0.html",
+    "supplier_name": "深圳市睿创星原科技有限公司",
+    "supplier_price": 3.0,
+    "moq": "5条起",
+    "monthly_sales": "待验证",
+    "supplier_notes": "6合1磁吸充电线,Type-C/Micro/Lightning多接口,编织线材耐用",
+    "weight_g": 30,
+    "description": "6合1磁吸充电数据线，Type-C/Micro/Lightning三接口兼容，编织线材耐用，磁吸收纳不打结",
+    "images": [
+      "https://s.coze.cn/image/QqmXjN_y3Ds/",
+      "https://s.coze.cn/image/m1xSQMOEaPM/",
+      "https://s.coze.cn/image/Keo1Z1PmxyQ/",
+      "https://s.coze.cn/image/mUiWcfnFT5w/"
+    ],
+    "variant": {
+      "color": "black",
+      "color_cn": "黑色",
+      "description": "黑色6合1磁吸充电数据线1米"
+    },
+    "target_market": [
+      "MLB",
+      "MLM"
+    ],
+    "tags": [
+      "electronics",
+      "cable",
+      "magnetic",
+      "charging",
+      "6in1",
+      "lightweight"
+    ],
+    "trend": "evergreen",
+    "source_note": "手机配件刚需品，超轻30g运费极低，6合1适配性强",
+    "item_ids": {
+      "MLB": "MLB7691658960",
+      "global": "CBT4413154093"
+    },
+    "listed_at": "2026-09-23T22:30:00",
+    "global": "CBT4413154093"
+  },
+  {
+    "id": "p36",
+    "rank": 36,
+    "name": "电动硅胶洁面仪（充电款）",
+    "name_es": "Limpiador Facial Sónico Eléctrico Recargable",
+    "category": "beauty",
+    "categoryLabel": "面部护理",
+    "categoryId": "CBT392452",
+    "price1688": 8.9,
+    "totalCost": 14.9,
+    "sellUSD": 9.99,
+    "netProfit": 41.2,
+    "margin": 34.1,
+    "competitors": 150,
+    "score": 7.5,
+    "verdict": "pass",
+    "note": "声波洁面护肤趋势品，充电款差异化，竞品仅150个",
+    "status": "listed",
+    "supplier_url": "https://s.1688.com/kq/-B9E8BDBACFB4C1B3D2C7.html",
+    "supplier_name": "温州市承泽科技有限公司",
+    "supplier_price": 8.9,
+    "moq": "2件起",
+    "monthly_sales": "739笔",
+    "supplier_notes": "3年店,浙江温州,超声波电动洁面仪,硅胶振动按摩,毛孔清洁",
+    "weight_g": 120,
+    "description": "超声波电动硅胶洁面仪，USB充电，IPX7防水，多档震动力度，深层清洁毛孔",
+    "images": [
+      "https://s.coze.cn/image/Xq9M-D0E5XI/",
+      "https://s.coze.cn/image/bYhiwSyUhKw/",
+      "https://s.coze.cn/image/EPXmzsoFfj8/",
+      "https://s.coze.cn/image/hauNe4p_PvE/"
+    ],
+    "variant": {
+      "color": "pink",
+      "color_cn": "粉色",
+      "description": "粉色超声波电动硅胶洁面仪"
+    },
+    "target_market": [
+      "MLB",
+      "MLM"
+    ],
+    "tags": [
+      "beauty",
+      "skincare",
+      "cleanser",
+      "sonic",
+      "silicone",
+      "rechargeable"
+    ],
+    "trend": "growing",
+    "source_note": "护肤趋势品，竞品仅150个蓝海，充电款差异化",
+    "item_ids": {
+      "global": "CBT5311591476",
+      "MLB": "MLB7690513498"
+    },
+    "listed_at": "2026-09-23T19:43:53",
+    "global": "CBT5311591476"
+  },
+  {
+    "id": "p37",
+    "rank": 37,
+    "name": "迷你手压封口机",
+    "name_es": "Selladora de Bolsas Mini Manual",
+    "category": "kitchen_tools",
+    "categoryLabel": "厨房工具",
+    "categoryId": "CBT456931",
+    "price1688": 1.52,
+    "totalCost": 7.52,
+    "sellUSD": 5.99,
+    "netProfit": 61.3,
+    "margin": 38.8,
+    "competitors": 2000,
+    "score": 7.1,
+    "verdict": "pass",
+    "note": "采购价极低¥1.52，利润率61.3%，100g轻量物流友好，竞品较多",
+    "status": "listed",
+    "supplier_url": "https://s.1688.com/kq/-C3D4C4E3CAD6D1B9B7E2BFDABBFA.html",
+    "supplier_name": "义乌市倩挥日用百货有限公司",
+    "supplier_price": 1.52,
+    "moq": "2件起",
+    "monthly_sales": "88510个",
+    "supplier_notes": "6年店,浙江金华,迷你封口机家用便携,手压式塑料袋密封",
+    "weight_g": 100,
+    "description": "迷你手压封口机，便携家用，零食袋塑料防潮密封，电池驱动热封",
+    "images": [
+      "https://s.coze.cn/image/5wkY113bPJI/",
+      "https://s.coze.cn/image/-SZVl2XUj7Y/",
+      "https://s.coze.cn/image/tdk9kuEQRIg/",
+      "https://s.coze.cn/image/GQghSAf8oVs/",
+      "https://s.coze.cn/image/Mlyjl2uTRpc/"
+    ],
+    "variant": {
+      "color": "white",
+      "color_cn": "白色",
+      "description": "白色迷你手压封口机"
+    },
+    "target_market": [
+      "MLB",
+      "MLM"
+    ],
+    "tags": [
+      "kitchen",
+      "sealer",
+      "portable",
+      "mini",
+      "household"
+    ],
+    "trend": "evergreen",
+    "source_note": "采购价极低¥1.52，月销8.8万+，厨房实用工具",
+    "item_ids": {
+      "global": "CBT5311569786",
+      "MLB": "MLB5280783885"
+    },
+    "listed_at": "2026-09-23T19:43:53",
+    "global": "CBT5311569786"
+  },
+  {
+    "id": "p38",
+    "rank": 38,
+    "name": "手指握力器（硅胶康复训练）",
+    "name_es": "Ejercitador de Dedos de Silicona para Rehabilitación",
+    "category": "sports_fitness",
+    "categoryLabel": "运动健身",
+    "categoryId": "CBT4403081923",
+    "price1688": 2.6,
+    "totalCost": 8.6,
+    "sellUSD": 6.99,
+    "netProfit": 54.4,
+    "margin": 37.1,
+    "competitors": 150,
+    "score": 6.9,
+    "verdict": "pass",
+    "note": "超轻50g运费极低，健身康复训练趋势品，竞品仅150个蓝海市场",
+    "status": "listed",
+    "supplier_url": "https://s.1688.com/kq/-CAD6D6B8BFB5B8B4C6F7.html",
+    "supplier_name": "金华市劲能体育用品有限公司",
+    "supplier_price": 2.6,
+    "moq": "2件起",
+    "monthly_sales": "971笔",
+    "supplier_notes": "3年店,浙江金华,硅胶握力圈,手指康复训练,跨境热销",
+    "weight_g": 50,
+    "description": "硅胶手指握力器，多力度可选，康复训练/健身/解压多功能，便携轻巧",
+    "images": [],
+    "variant": {
+      "color": "purple",
+      "color_cn": "紫色",
+      "description": "紫色硅胶手指握力器（中力度）"
+    },
+    "target_market": [
+      "MLB",
+      "MLM"
+    ],
+    "tags": [
+      "sports",
+      "fitness",
+      "grip",
+      "rehabilitation",
+      "silicone",
+      "lightweight"
+    ],
+    "trend": "growing",
+    "source_note": "健身康复趋势品，超轻50g运费极低，竞品少蓝海市场",
+    "item_ids": {
+      "MLB": "MLB7690527162"
+    },
+    "listed_at": "2026-09-23T19:43:53",
+    "global": "CBT4411843173"
+  },
+  {
+    "id": "p39",
+    "rank": 39,
+    "name": "磁力搅拌杯（自动搅拌）",
+    "name_es": "Taza de Mezcla Magnética Automática",
+    "category": "kitchen_tools",
+    "categoryLabel": "创意杯子",
+    "categoryId": "CBT456931",
+    "price1688": 8.5,
+    "totalCost": 14.5,
+    "sellUSD": 14.99,
+    "netProfit": 52.1,
+    "margin": 27.3,
+    "competitors": 300,
+    "score": 6.8,
+    "verdict": "pass",
+    "note": "魔法杯概念新奇有趣，送礼场景强，高客单价$14.99绝对利润¥40.21",
+    "status": "listed",
+    "supplier_url": "https://s.1688.com/kq/-D7D4B6AFBDC1B0E8B1ADD7D3.html",
+    "supplier_name": "温州卓屿电器制造有限公司",
+    "supplier_price": 8.5,
+    "moq": "2件起",
+    "monthly_sales": "92笔",
+    "supplier_notes": "2年店,浙江温州,跨境2026新款搅拌杯,全自动保温智能测温磁力",
+    "weight_g": 350,
+    "description": "全自动磁力搅拌杯，USB充电，一键自动搅拌，不锈钢内胆，咖啡/奶粉/蛋白粉适用",
+    "images": [],
+    "variant": {
+      "color": "black",
+      "color_cn": "黑色",
+      "description": "黑色全自动磁力搅拌杯400ml"
+    },
+    "target_market": [
+      "MLB",
+      "MLM"
+    ],
+    "tags": [
+      "kitchen",
+      "magnetic",
+      "stirring",
+      "cup",
+      "creative",
+      "gift"
+    ],
+    "trend": "growing",
+    "source_note": "新奇创意品，送礼场景强，高客单价绝对利润可观",
+    "item_ids": {
+      "MLB": "MLB7690544392"
+    },
+    "listed_at": "2026-09-23T19:43:53",
+    "global": "CBT4411841467"
+  },
+  {
+    "id": "p40",
+    "rank": 40,
+    "name": "星空投影氛围灯（USB车载/家用）",
+    "name_es": "Luz de Proyección Estrellada USB para Auto/Hogar",
+    "category": "home_decor",
+    "categoryLabel": "氛围灯",
+    "categoryId": "CBT392132",
+    "price1688": 13.8,
+    "totalCost": 19.8,
+    "sellUSD": 14.99,
+    "netProfit": 46.6,
+    "margin": 34.0,
+    "competitors": 800,
+    "score": 6.7,
+    "verdict": "pass",
+    "note": "网红爆款氛围灯，车载+家用两用场景，绝对利润¥52.84可观",
+    "status": "listed",
+    "supplier_url": "https://s.1688.com/kq/-D0C7BFD5CDB6D3B0B5C6.html",
+    "supplier_name": "中山市明动照明有限公司",
+    "supplier_price": 13.8,
+    "moq": "2件起",
+    "monthly_sales": "702笔",
+    "supplier_notes": "6年店,广东中山,星空灯LED小夜灯,USB氛围投影灯",
+    "weight_g": 200,
+    "description": "USB星空投影灯，车载/家用两用，浪漫满天星效果，LED小夜灯氛围灯，鹅颈可调角度",
+    "images": [
+      "https://s.coze.cn/image/ilsPp4K3PTU/",
+      "https://s.coze.cn/image/8N0oWUcMDMY/",
+      "https://s.coze.cn/image/NRB6gNXMqmE/",
+      "https://s.coze.cn/image/fot7Dw18dsY/"
+    ],
+    "variant": {
+      "color": "white",
+      "color_cn": "白色",
+      "description": "白色USB星空投影氛围灯"
+    },
+    "target_market": [
+      "MLB",
+      "MLM"
+    ],
+    "tags": [
+      "home",
+      "light",
+      "star",
+      "projector",
+      "USB",
+      "ambient",
+      "car"
+    ],
+    "trend": "hot",
+    "source_note": "网红爆款氛围灯，车载+家用两用，年轻人刚需",
+    "item_ids": {
+      "global": "CBT4411846161",
+      "MLB": "MLB7690537572"
+    },
+    "listed_at": "2026-09-23T19:43:53",
+    "global": "CBT4411846161",
+    "mlb_id": "MLB5280873329"
   }
 ]

@@ -1,6 +1,71 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAccessToken } from '@/lib/token-store';
-import { MELI_CONFIG } from '@/lib/config';
+
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+
+const API = 'https://api.mercadolibre.com';
+
+const ALLOWED_SITES = new Set(['MLB', 'MLM', 'MLA', 'MLC', 'MCO', 'MLU']);
+const DEFAULT_LOGISTIC = 'remote';
+const DEFAULT_LISTING_TYPE = 'gold_special';
+
+// 默认属性常量（与 auto_listing 脚本一致）
+const BRAND = 'SIN MARCA';
+const BRAND_ID = '35249837';
+const CONDITION_ID = '2230284';
+const CONDITION_NAME = 'New';
+const WARRANTY_TYPE = 'No warranty';
+const WARRANTY_TYPE_ID = '6150835';
+const EMPTY_GTIN = 'Another reason';
+const EMPTY_GTIN_ID = '17055161';
+
+interface PicRef { id: string }
+
+// 上传单张图片：公网URL走 source；data:base64 走 multipart
+async function uploadPicture(token: string, image: string): Promise<PicRef | null> {
+  // 1) 公网 URL：source 方式（已验证最稳定）
+  if (/^https?:\/\//i.test(image)) {
+    const res = await fetch(`${API}/pictures`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ source: image }),
+      cache: 'no-store',
+    });
+    if (res.ok) {
+      const d = await res.json();
+      if (d.id) return { id: d.id };
+    }
+    // source 失败则不再回退 multipart（URL 无法直接 multipart），报错
+    const t = await res.text().catch(() => '');
+    console.error('picture source upload failed:', res.status, t.slice(0, 200));
+    return null;
+  }
+
+  // 2) data:image/...;base64 → multipart
+  const m = image.match(/^data:([^;]+);base64,(.*)$/s);
+  if (!m) return null;
+  const mime = m[1] || 'image/jpeg';
+  const buf = Buffer.from(m[2], 'base64');
+
+  const form = new FormData();
+  form.append('file', new Blob([buf], { type: mime }), 'product.jpg');
+
+  // 依次尝试两个 multipart 端点
+  for (const endpoint of ['/pictures/items/upload', '/pictures']) {
+    const res = await fetch(`${API}${endpoint}`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}` },
+      body: form,
+      cache: 'no-store',
+    });
+    if (res.ok) {
+      const d = await res.json();
+      if (d.id) return { id: d.id };
+    }
+  }
+  return null;
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,95 +79,98 @@ export async function POST(request: NextRequest) {
       category_id,
       title,
       description,
-      price,
+      net_proceeds,
       available_quantity,
-      condition,
-      free_shipping,
-      images,
+      images = [],
+      sites = ['MLB'],
     } = body;
 
-    if (!category_id || !title || !price || !available_quantity || !images || images.length === 0) {
-      return NextResponse.json({ success: false, error: '缺少必填字段' }, { status: 400 });
+    if (!category_id || !title || !net_proceeds || !available_quantity) {
+      return NextResponse.json({ success: false, error: '缺少必填字段（品类/标题/净收益/库存）' }, { status: 400 });
+    }
+    if (!Array.isArray(images) || images.length === 0) {
+      return NextResponse.json({ success: false, error: '请至少提供 1 张产品图（公网URL或已上传图片）' }, { status: 400 });
     }
 
-    // Upload images first
-    const uploadedPictures = [];
-    for (const imageBase64 of images) {
-      // Remove data:image/xxx;base64, prefix
-      const base64Data = imageBase64.split(',')[1];
-      const mimeMatch = imageBase64.match(/data:([^;]+);/);
-      const mimeType = mimeMatch ? mimeMatch[1] : 'image/jpeg';
-
-      const formData = new FormData();
-      // Convert base64 to blob
-      const byteCharacters = atob(base64Data);
-      const byteNumbers = new Array(byteCharacters.length);
-      for (let i = 0; i < byteCharacters.length; i++) {
-        byteNumbers[i] = byteCharacters.charCodeAt(i);
-      }
-      const byteArray = new Uint8Array(byteNumbers);
-      const blob = new Blob([byteArray], { type: mimeType });
-
-      formData.append('file', blob, 'image.jpg');
-
-      const uploadResponse = await fetch(`${MELI_CONFIG.apiBase}/pictures`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${accessToken}`,
-        },
-        body: formData,
-      });
-
-      if (!uploadResponse.ok) {
-        const errorText = await uploadResponse.text();
-        console.error('Image upload failed:', errorText);
-        return NextResponse.json({ success: false, error: `图片上传失败: ${uploadResponse.status}` }, { status: 500 });
-      }
-
-      const pictureData = await uploadResponse.json();
-      uploadedPictures.push({ id: pictureData.id });
+    // 校验站点
+    const targetSites: string[] = (Array.isArray(sites) ? sites : ['MLB'])
+      .map((s: string) => String(s).toUpperCase())
+      .filter((s: string) => ALLOWED_SITES.has(s));
+    if (targetSites.length === 0) {
+      return NextResponse.json({ success: false, error: '没有合法的目标站点' }, { status: 400 });
     }
 
-    // Create item
-    const itemData = {
-      title: title.trim(),
+    // 1) 上传图片
+    const pictureIds: string[] = [];
+    for (const img of images) {
+      const pic = await uploadPicture(accessToken, img);
+      if (pic) pictureIds.push(pic.id);
+    }
+    if (pictureIds.length === 0) {
+      return NextResponse.json({ success: false, error: '图片全部上传失败，请检查图片链接是否可公开访问' }, { status: 502 });
+    }
+
+    // 2) 组装 /global/user-products payload（UP / net_proceeds 模式）
+    const cleanTitle = String(title).trim().slice(0, 60);
+    const sellerSku = `SKU-${Date.now().toString(36).toUpperCase()}`;
+    const modelValue = `MDL-${Math.random().toString(16).slice(2, 8).toUpperCase()}`;
+
+    const sitesToSell = targetSites.map(sid => ({
+      site_id: sid,
+      logistic_type: DEFAULT_LOGISTIC,
+      listing_type_id: DEFAULT_LISTING_TYPE,
+      title: cleanTitle,
+    }));
+
+    const payload = {
+      sites_to_sell: sitesToSell,
+      global_net_proceeds: Number(net_proceeds),
       category_id,
-      price: Number(price),
-      currency_id: 'USD',
+      title: cleanTitle,
+      description: { plain_text: description || '' },
       available_quantity: Number(available_quantity),
-      buying_mode: 'buy_it_now',
-      sale_terms: [],
-      description: {
-        plain_text: description || '',
-      },
-      pictures: uploadedPictures,
-      condition: condition || 'new',
-      free_shipping: free_shipping ? { mode: 'me2' } : undefined,
-      listing_type_id: free_shipping ? 'gold_special' : 'gold_mini',
+      pictures: pictureIds.map(id => ({ id })),
+      attributes: [
+        { id: 'BRAND', name: 'Brand', value_id: BRAND_ID, value_name: BRAND, values: [{ id: BRAND_ID, name: BRAND }] },
+        { id: 'MODEL', name: 'Model', value_id: null, value_name: modelValue, values: [{ id: null, name: modelValue }] },
+        { id: 'ITEM_CONDITION', name: 'Item condition', value_id: CONDITION_ID, value_name: CONDITION_NAME, values: [{ id: CONDITION_ID, name: CONDITION_NAME }] },
+        { id: 'PACKAGE_HEIGHT', name: 'Package height', value_id: null, value_name: '30 cm', values: [{ id: null, name: '30 cm' }] },
+        { id: 'PACKAGE_LENGTH', name: 'Package length', value_id: null, value_name: '30 cm', values: [{ id: null, name: '30 cm' }] },
+        { id: 'PACKAGE_WIDTH', name: 'Package width', value_id: null, value_name: '30 cm', values: [{ id: null, name: '30 cm' }] },
+        { id: 'PACKAGE_WEIGHT', name: 'Package weight', value_id: null, value_name: '500 g', values: [{ id: null, name: '500 g' }] },
+        { id: 'EMPTY_GTIN_REASON', name: 'Empty GTIN reason', value_id: EMPTY_GTIN_ID, value_name: EMPTY_GTIN, values: [{ id: EMPTY_GTIN_ID, name: EMPTY_GTIN }] },
+        { id: 'SELLER_SKU', name: 'Seller SKU', value_id: null, value_name: sellerSku, values: [{ id: null, name: sellerSku }] },
+      ],
+      sale_terms: [
+        { id: 'WARRANTY_TYPE', name: 'Warranty type', value_id: WARRANTY_TYPE_ID, value_name: WARRANTY_TYPE, values: [{ id: WARRANTY_TYPE_ID, name: WARRANTY_TYPE }] },
+      ],
     };
 
-    const createResponse = await fetch(`${MELI_CONFIG.apiBase}/items`, {
+    // 3) 创建全球商品
+    const createRes = await fetch(`${API}/global/user-products`, {
       method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${accessToken}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(itemData),
+      headers: { Authorization: `Bearer ${accessToken}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      cache: 'no-store',
     });
 
-    const result = await createResponse.json();
+    const resultText = await createRes.text();
+    let result: any = null;
+    try { result = JSON.parse(resultText); } catch { /* non-json */ }
 
-    if (!createResponse.ok) {
-      console.error('Item creation failed:', result);
-      const errorMessage = result.cause?.[0]?.message || result.message || '发布失败';
-      return NextResponse.json({ success: false, error: errorMessage, details: result }, { status: createResponse.status });
+    if (!createRes.ok) {
+      console.error('global listing create failed:', createRes.status, resultText.slice(0, 400));
+      const msg = result?.cause?.[0]?.message || result?.message || `发布失败 (${createRes.status})`;
+      return NextResponse.json({ success: false, error: msg, details: result }, { status: createRes.status });
     }
 
     return NextResponse.json({
       success: true,
-      itemId: result.id,
-      permalink: result.permalink,
-      message: '商品发布成功',
+      itemId: result?.id || result?.global_item_id,
+      permalink: result?.permalink,
+      pictures: pictureIds.length,
+      sites: targetSites,
+      message: '全球商品创建成功，站点listing将自动生成',
     });
   } catch (error) {
     console.error('Publish error:', error);
