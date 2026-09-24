@@ -45,10 +45,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(result);
   } catch (e) {
     console.error('[infringement-check] Error:', e);
-    return NextResponse.json(
-      { error: '检测失败', detail: String(e) },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: '检测失败' }, { status: 500 });
   }
 }
 

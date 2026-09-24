@@ -22,10 +22,41 @@ const EMPTY_GTIN_ID = '17055161';
 
 interface PicRef { id: string }
 
+// 白名单域名：只允许从这些CDN加载图片
+const ALLOWED_IMAGE_DOMAINS = [
+  'cbu01.alicdn.com',
+  'cbu02.alicdn.com',
+  'cbu03.alicdn.com',
+  'sc04.alicdn.com',
+  'img.alicdn.com',
+  'http2.mlstatic.com',
+  'ae-pic-a1.aliexpress-media.com',
+];
+
+function isAllowedImageUrl(url: string): boolean {
+  try {
+    const parsed = new URL(url);
+    // 禁止内网地址
+    const hostname = parsed.hostname.toLowerCase();
+    if (hostname === 'localhost' || hostname.startsWith('127.') || hostname.startsWith('192.168.') || hostname.startsWith('10.') || hostname === '169.254.169.254') {
+      return false;
+    }
+    // 检查域名白名单
+    return ALLOWED_IMAGE_DOMAINS.some(domain => hostname === domain || hostname.endsWith('.' + domain));
+  } catch {
+    return false;
+  }
+}
+
 // 上传单张图片：公网URL走 source；data:base64 走 multipart
 async function uploadPicture(token: string, image: string): Promise<PicRef | null> {
   // 1) 公网 URL：source 方式（已验证最稳定）
   if (/^https?:\/\//i.test(image)) {
+    // H1修复：校验URL白名单防SSRF
+    if (!isAllowedImageUrl(image)) {
+      console.error('Image URL not allowed:', image);
+      return null;
+    }
     const res = await fetch(`${API}/pictures`, {
       method: 'POST',
       headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
@@ -160,8 +191,9 @@ export async function POST(request: NextRequest) {
 
     if (!createRes.ok) {
       console.error('global listing create failed:', createRes.status, resultText.slice(0, 400));
-      const msg = result?.cause?.[0]?.message || result?.message || `发布失败 (${createRes.status})`;
-      return NextResponse.json({ success: false, error: msg, details: result }, { status: createRes.status });
+      // H6修复：不暴露内部错误详情，只返回用户友好的消息
+      const msg = '发布失败，请检查品类、标题或图片格式是否正确';
+      return NextResponse.json({ success: false, error: msg }, { status: createRes.status });
     }
 
     return NextResponse.json({
