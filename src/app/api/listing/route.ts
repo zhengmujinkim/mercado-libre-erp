@@ -9,51 +9,59 @@ export async function GET() {
     }
 
     const userId = process.env.MELI_USER_ID || '3650205937';
-    const res = await fetch(
-      `https://api.mercadolibre.com/users/${userId}/items/search?limit=50&offset=0`,
+    
+    // Step 1: 获取CBT ID列表
+    const searchRes = await fetch(
+      `https://api.mercadolibre.com/users/${userId}/items/search?limit=50&search_type=scan&status=active`,
       {
         headers: { Authorization: `Bearer ${token}` },
-        next: { revalidate: 60 },
+        cache: 'no-store',
       }
     );
 
-    if (!res.ok) {
-      return NextResponse.json({ listings: [], message: `API请求失败 (${res.status})` });
+    if (!searchRes.ok) {
+      return NextResponse.json({ listings: [], message: `API请求失败 (${searchRes.status})` });
     }
 
-    const data = await res.json();
-    const items: string[] = data.results || [];
+    const searchData = await searchRes.json();
+    const items: string[] = searchData.results || [];
 
     if (items.length === 0) {
       return NextResponse.json({ listings: [], message: '暂无在售商品' });
     }
 
-    // Fetch details for each item
-    const allListings: any[] = [];
-    for (const itemId of items) {
-      try {
-        const itemRes = await fetch(
-          `https://api.mercadolibre.com/items/${itemId}`,
-          { headers: { Authorization: `Bearer ${token}` } }
-        );
-        if (!itemRes.ok) continue;
-        const item = await itemRes.json();
-        allListings.push({
-          id: item.id,
-          title: item.title,
-          price: item.price,
-          currency_id: item.currency_id,
-          available_quantity: item.available_quantity || 0,
-          sold_quantity: item.sold_quantity || 0,
-          status: item.status,
-          site_id: item.site_id,
-          permalink: item.permalink,
-          thumbnail: item.thumbnail,
-        });
-      } catch {
-        continue;
+    // Step 2: 批量获取CBT详情（每次最多50个）
+    const idsBatch = items.slice(0, 50).join(',');
+    const itemsRes = await fetch(
+      `https://api.mercadolibre.com/items?ids=${idsBatch}`,
+      {
+        headers: { Authorization: `Bearer ${token}` },
+        cache: 'no-store',
       }
+    );
+
+    if (!itemsRes.ok) {
+      return NextResponse.json({ listings: [], message: `批量查询失败: ${itemsRes.status}` });
     }
+
+    const itemsData = await itemsRes.json();
+    const allListings = itemsData
+      .filter((item: any) => item.http_code === 200 && item.body)
+      .map((item: any) => {
+        const body = item.body;
+        return {
+          id: body.id,
+          title: body.title,
+          price: body.price,
+          currency_id: body.currency_id,
+          available_quantity: body.available_quantity || 0,
+          sold_quantity: body.sold_quantity || 0,
+          status: body.status,
+          site_id: body.site_id,
+          permalink: body.permalink,
+          thumbnail: body.thumbnail,
+        };
+      });
 
     // Stats (listing-specific)
     const activeCount = allListings.filter(l => l.status === 'active').length;

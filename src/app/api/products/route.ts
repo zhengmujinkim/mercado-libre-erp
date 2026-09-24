@@ -5,7 +5,7 @@ import { MELI_CONFIG } from '@/lib/config';
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const category = searchParams.get('category');
-  const status = searchParams.get('status');
+  const status = searchParams.get('status') || 'active';
 
   try {
     const token = await getAccessToken();
@@ -13,69 +13,72 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ products: [], total: 0, mock: false, message: '请先完成美客多授权' });
     }
 
-    const res = await fetch(
-      `${MELI_CONFIG.apiBase}/users/${MELI_CONFIG.userId}/items/search?status=active`,
+    // Step 1: 获取CBT ID列表
+    const searchRes = await fetch(
+      `${MELI_CONFIG.apiBase}/users/${MELI_CONFIG.userId}/items/search?limit=50&search_type=scan&status=${status}`,
       {
         headers: { Authorization: `Bearer ${token}` },
         cache: 'no-store',
       }
     );
 
-    if (!res.ok) {
-      return NextResponse.json({ products: [], total: 0, mock: false, message: `美客多API返回错误: ${res.status}` });
+    if (!searchRes.ok) {
+      return NextResponse.json({ products: [], total: 0, mock: false, message: `美客多API返回错误: ${searchRes.status}` });
     }
 
-    const data = await res.json();
-    const itemIds: string[] = data.results || [];
+    const searchData = await searchRes.json();
+    const itemIds: string[] = searchData.results || [];
 
     if (itemIds.length === 0) {
-      return NextResponse.json({ products: [], total: 0, mock: false, message: '暂无在售商品，请先在店铺后台上架商品' });
+      return NextResponse.json({ products: [], total: 0, mock: false, message: '暂无在售商品' });
     }
 
-    // Fetch item details (max 20 at a time)
-    const itemsToFetch = itemIds.slice(0, 20);
-    const itemDetails = await Promise.all(
-      itemsToFetch.map(async (id: string) => {
-        try {
-          const itemRes = await fetch(`${MELI_CONFIG.apiBase}/items/${id}`, {
-            headers: { Authorization: `Bearer ${token}` },
-            cache: 'no-store',
-          });
-          if (!itemRes.ok) return null;
-          const item = await itemRes.json();
-          return {
-            id: item.id,
-            name: item.title || 'Unknown',
-            category: item.category_id || '未知',
-            purchasePrice: 0,
-            sellingPrice: item.price || 0,
-            weight: item.shipping?.dimensions?.weight ? Number(item.shipping.dimensions.weight) : 0,
-            site: item.site_id || 'MLM',
-            status: item.status || 'active',
-            rating: 0,
-            soldRange: item.sales?.qty_sold_60_months?.toString() || '0',
-            thumbnail: item.thumbnail || '',
-            permalink: item.permalink || '',
-          };
-        } catch {
-          return null;
-        }
-      })
+    // Step 2: 批量获取CBT详情（每次最多50个）
+    const idsBatch = itemIds.slice(0, 50).join(',');
+    const itemsRes = await fetch(
+      `${MELI_CONFIG.apiBase}/items?ids=${idsBatch}`,
+      {
+        headers: { Authorization: `Bearer ${token}` },
+        cache: 'no-store',
+      }
     );
 
-    let products = itemDetails.filter(Boolean);
+    if (!itemsRes.ok) {
+      return NextResponse.json({ products: [], total: 0, mock: false, message: `批量查询失败: ${itemsRes.status}` });
+    }
 
+    const itemsData = await itemsRes.json();
+    // itemsData 是数组，每个元素是 {body: {...}, http_code: 200} 或 {body: {...}, http_code: 403}
+    const products = itemsData
+      .filter((item: any) => item.http_code === 200 && item.body)
+      .map((item: any) => {
+        const body = item.body;
+        return {
+          id: body.id,
+          name: body.title || 'Unknown',
+          category: body.category_id || '未知',
+          purchasePrice: 0,
+          sellingPrice: body.price || 0,
+          weight: body.shipping?.dimensions?.weight ? Number(body.shipping.dimensions.weight) : 0,
+          site: body.site_id || 'MLM',
+          status: body.status || 'active',
+          rating: 0,
+          soldRange: body.sales?.qty_sold_60_months?.toString() || '0',
+          thumbnail: body.thumbnail || '',
+          permalink: body.permalink || '',
+        };
+      });
+
+    // 前端过滤
+    let filtered = products;
     if (category && category !== '全部品类') {
-      products = products.filter((p) => p && (p as any).category === category);
-    }
-    if (status && status !== '全部状态') {
-      products = products.filter((p) => p && (p as any).status === status);
+      filtered = products.filter((p) => p.category === category);
     }
 
-    return NextResponse.json({ products, total: products.length, mock: false });
+    return NextResponse.json({ products: filtered, total: filtered.length, mock: false });
   } catch (err) {
     console.error('Products API error:', err);
-    return NextResponse.json({ products: [], total: 0, mock: false, message: '美客多API连接失败，请稍后重试' });
+    return NextResponse.json({ products: [], total: 0, mock: false, message: '美客多API连接失败' });
   }
 }
 
