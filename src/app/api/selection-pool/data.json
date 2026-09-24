@@ -8,7 +8,7 @@
     "categoryId": "CBT458038",
     "price1688": 5.3,
     "totalCost": 11.3,
-    "sellUSD": 8.99,
+    "sellUSD": 3.14,
     "netProfit": 43.07,
     "margin": 66.5,
     "competitors": 40,
@@ -32,7 +32,19 @@
     },
     "item_ids": {
       "BR": "MLB5272076269"
-    }
+    },
+    "images": [
+      "https://http2.mlstatic.com/D_709737-CBT118037907881_092026-O.jpg",
+      "https://http2.mlstatic.com/D_677846-CBT116532580792_092026-O.jpg",
+      "https://http2.mlstatic.com/D_722905-CBT118040060625_092026-O.jpg",
+      "https://http2.mlstatic.com/D_719170-CBT118040060701_092026-O.jpg",
+      "https://http2.mlstatic.com/D_913602-CBT118032426869_092026-O.jpg"
+    ],
+    "images_synced_at": "2026-09-24T17:34:20.889057",
+    "images_source": "ml_api",
+    "old_sellUSD": 8.99,
+    "cost_usd": 1.57,
+    "markup_rate": 1.0
   },
   {
     "id": "p02",
@@ -43,7 +55,7 @@
     "categoryId": "CBT392452",
     "price1688": 3.15,
     "totalCost": 9.15,
-    "sellUSD": 4.99,
+    "sellUSD": 2.54,
     "netProfit": 21.03,
     "margin": 58.5,
     "competitors": 150,
@@ -59,7 +71,19 @@
     "supplier_notes": "含调面膜刷+调膜棒+带刻度计量勺,11年厂家,支持定制Logo",
     "item_ids": {
       "BR": "MLB5272063177"
-    }
+    },
+    "images": [
+      "https://http2.mlstatic.com/D_666797-CBT116523070944_092026-O.jpg",
+      "https://http2.mlstatic.com/D_679735-CBT118029640235_092026-O.jpg",
+      "https://http2.mlstatic.com/D_899006-CBT118029493863_092026-O.jpg",
+      "https://http2.mlstatic.com/D_715826-CBT118040018655_092026-O.jpg",
+      "https://http2.mlstatic.com/D_984322-CBT116531829262_092026-O.jpg"
+    ],
+    "images_synced_at": "2026-09-24T17:34:21.884613",
+    "images_source": "ml_api",
+    "old_sellUSD": 4.99,
+    "cost_usd": 1.27,
+    "markup_rate": 1.0
   },
   {
     "id": "p03",
@@ -70,7 +94,7 @@
     "categoryId": "CBT29884",
     "price1688": 1.2,
     "totalCost": 7.2,
-    "sellUSD": 4.99,
+    "sellUSD": 2.0,
     "netProfit": 22.98,
     "margin": 64.0,
     "competitors": 200,
@@ -89,7 +113,19 @@
       "MX": "MLM3531230477",
       "AR": "MLA3979511882",
       "CO": "MCO4468664412"
-    }
+    },
+    "images": [
+      "https://http2.mlstatic.com/D_656494-CBT118037914423_092026-O.jpg",
+      "https://http2.mlstatic.com/D_960750-CBT118040190709_092026-O.jpg",
+      "https://http2.mlstatic.com/D_859921-CBT118040876667_092026-O.jpg",
+      "https://http2.mlstatic.com/D_876120-CBT118040889189_092026-O.jpg",
+      "https://http2.mlstatic.com/D_742044-CBT116531711218_092026-O.jpg"
+    ],
+    "images_synced_at": "2026-09-24T17:34:23.356526",
+    "images_source": "ml_api",
+    "old_sellUSD": 4.99,
+    "cost_usd": 1.0,
+    "markup_rate": 1.0
   },
   {
     "id": "p04",
@@ -100,7 +136,7 @@
     "categoryId": "CBT1663",
     "price1688": 2.3,
     "totalCost": 8.3,
-    "sellUSD": 4.99,
+    "sellUSD": 2.31,
     "netProfit": 21.88,
     "margin": 60.9,
     "competitors": 80,
@@ -132,7 +168,10 @@
       "https://http2.mlstatic.com/D_669026-CBT118108304947_092026-O.jpg"
     ],
     "images_fixed_at": "2026-09-23T12:08:45",
-    "images_fixed_note": "替换有中文水印的供应商图片为Alibaba国际站干净产品图(无水印无文字),5张白底产品图"
+    "images_fixed_note": "替换有中文水印的供应商图片为Alibaba国际站干净产品图(无水印无文字),5张白底产品图",
+    "old_sellUSD": 4.99,
+    "cost_usd": 1.15,
+    "markup_rate": 1.0
   },
   {
     "id": "p05",
@@ -143,7 +182,7 @@
     "categoryId": "CBT458038",
     "price1688": 2.48,
     "totalCost": 8.48,
-    "sellUSD": 5.99,
+    "sellUSD": 2.36,
     "netProfit": 27.75,
     "margin": 64.3,
     "competitors": 150,
@@ -169,7 +208,21 @@
       "global": "CBT5302602026",
       "MLB": "MLB7683884744"
     },
-    "listed_at": "2026-09-22T19:26:52"
+    "listed_at": "2026-09-22T19:26:52",
+    "images": [
+      "https://http2.mlstatic.com/D_699127-CBT116547498448_092026-O.jpg",
+      "https://http2.mlstatic.com/D_692485-CBT116547587368_092026-O.jpg",
+      "https://http2.mlstatic.com/D_626959-CBT116547675802_092026-O.jpg",
+      "https://http2.mlstatic.com/D_929144-CBT118057828127_092026-O.jpg",
+      "https://http2.mlstatic.com/D_890061-CBT118057365963_092026-O.jpg",
+      "https://http2.mlstatic.com/D_879100-CBT118057624653_092026-O.jpg",
+      "https://http2.mlstatic.com/D_865121-CBT116549115862_092026-O.jpg"
+    ],
+    "images_synced_at": "2026-09-24T17:34:23.888118",
+    "images_source": "ml_api",
+    "old_sellUSD": 5.99,
+    "cost_usd": 1.18,
+    "markup_rate": 1.0
   },
   {
     "id": "p06",
@@ -180,7 +233,7 @@
     "categoryId": "CBT389307",
     "price1688": 1.2,
     "totalCost": 7.2,
-    "sellUSD": 3.49,
+    "sellUSD": 2.0,
     "netProfit": 13.91,
     "margin": 55.3,
     "competitors": 4317,
@@ -201,7 +254,19 @@
       "AR": "MLA3979505480",
       "CL": "MLC2264954097",
       "CO": "MCO4468622414"
-    }
+    },
+    "images": [
+      "https://http2.mlstatic.com/D_745987-CBT118037758755_092026-O.jpg",
+      "https://http2.mlstatic.com/D_869288-CBT118040054357_092026-O.jpg",
+      "https://http2.mlstatic.com/D_663394-CBT118040024755_092026-O.jpg",
+      "https://http2.mlstatic.com/D_760806-CBT116532418402_092026-O.jpg",
+      "https://http2.mlstatic.com/D_863014-CBT118040889243_092026-O.jpg"
+    ],
+    "images_synced_at": "2026-09-24T17:34:24.908005",
+    "images_source": "ml_api",
+    "old_sellUSD": 3.49,
+    "cost_usd": 1.0,
+    "markup_rate": 1.0
   },
   {
     "id": "p07",
@@ -212,7 +277,7 @@
     "categoryId": "CBT392452",
     "price1688": 0.95,
     "totalCost": 6.95,
-    "sellUSD": 3.99,
+    "sellUSD": 1.93,
     "netProfit": 17.18,
     "margin": 59.8,
     "competitors": 500,
@@ -232,7 +297,19 @@
       "AR": "MLA3979493482",
       "CL": "MLC2264942089",
       "CO": "MCO2226432003"
-    }
+    },
+    "images": [
+      "https://http2.mlstatic.com/D_869166-CBT118037945921_092026-O.jpg",
+      "https://http2.mlstatic.com/D_811110-CBT118037946093_092026-O.jpg",
+      "https://http2.mlstatic.com/D_860098-CBT118037917767_092026-O.jpg",
+      "https://http2.mlstatic.com/D_880920-CBT118037768755_092026-O.jpg",
+      "https://http2.mlstatic.com/D_632784-CBT118040220633_092026-O.jpg"
+    ],
+    "images_synced_at": "2026-09-24T17:34:26.065080",
+    "images_source": "ml_api",
+    "old_sellUSD": 3.99,
+    "cost_usd": 0.97,
+    "markup_rate": 1.0
   },
   {
     "id": "p08",
@@ -243,7 +320,7 @@
     "categoryId": "CBT1659",
     "price1688": 12.0,
     "totalCost": 18.0,
-    "sellUSD": 14.99,
+    "sellUSD": 4.25,
     "netProfit": 72.66,
     "margin": 67.3,
     "competitors": 80,
@@ -263,7 +340,19 @@
       "AR": "MLA3979493328",
       "CL": "MLC2264954691",
       "CO": "MCO2226445183"
-    }
+    },
+    "images": [
+      "https://http2.mlstatic.com/D_604687-CBT118034239011_092026-O.jpg",
+      "https://http2.mlstatic.com/D_817697-CBT118034298653_092026-O.jpg",
+      "https://http2.mlstatic.com/D_731973-CBT118040223449_092026-O.jpg",
+      "https://http2.mlstatic.com/D_771093-CBT118040191045_092026-O.jpg",
+      "https://http2.mlstatic.com/D_940569-CBT118040054249_092026-O.jpg"
+    ],
+    "images_synced_at": "2026-09-24T17:34:29.019802",
+    "images_source": "ml_api",
+    "old_sellUSD": 14.99,
+    "cost_usd": 2.5,
+    "markup_rate": 0.7
   },
   {
     "id": "p09",
@@ -274,7 +363,7 @@
     "categoryId": "CBT431591",
     "price1688": 8.5,
     "totalCost": 14.5,
-    "sellUSD": 7.99,
+    "sellUSD": 3.42,
     "netProfit": 33.82,
     "margin": 58.8,
     "competitors": 2000,
@@ -292,7 +381,20 @@
       "global": "CBT5302401030",
       "MLB": "MLB5274634965"
     },
-    "listed_at": "2026-09-22T19:06:49"
+    "listed_at": "2026-09-22T19:06:49",
+    "images": [
+      "https://http2.mlstatic.com/D_815926-CBT118055102671_092026-O.jpg",
+      "https://http2.mlstatic.com/D_678201-CBT118055102651_092026-O.jpg",
+      "https://http2.mlstatic.com/D_915221-CBT118057772531_092026-O.jpg",
+      "https://http2.mlstatic.com/D_701586-CBT118057336395_092026-O.jpg",
+      "https://http2.mlstatic.com/D_890795-CBT118057599595_092026-O.jpg",
+      "https://http2.mlstatic.com/D_778157-CBT118057129297_092026-O.jpg"
+    ],
+    "images_synced_at": "2026-09-24T17:34:29.752097",
+    "images_source": "ml_api",
+    "old_sellUSD": 7.99,
+    "cost_usd": 2.01,
+    "markup_rate": 0.7
   },
   {
     "id": "p10",
@@ -303,7 +405,7 @@
     "categoryId": "CBT392503",
     "price1688": 3.1,
     "totalCost": 9.1,
-    "sellUSD": 4.49,
+    "sellUSD": 2.53,
     "netProfit": 18.06,
     "margin": 55.9,
     "competitors": 500,
@@ -321,7 +423,20 @@
       "global": "CBT4403053681",
       "MLB": "MLB7683785874"
     },
-    "listed_at": "2026-09-22T19:08:18"
+    "listed_at": "2026-09-22T19:08:18",
+    "images": [
+      "https://http2.mlstatic.com/D_810702-CBT118054807733_092026-O.jpg",
+      "https://http2.mlstatic.com/D_641307-CBT118054661195_092026-O.jpg",
+      "https://http2.mlstatic.com/D_714770-CBT118055104087_092026-O.jpg",
+      "https://http2.mlstatic.com/D_716653-CBT118056922801_092026-O.jpg",
+      "https://http2.mlstatic.com/D_840254-CBT118057599977_092026-O.jpg",
+      "https://http2.mlstatic.com/D_892309-CBT118056982281_092026-O.jpg"
+    ],
+    "images_synced_at": "2026-09-24T17:34:30.549056",
+    "images_source": "ml_api",
+    "old_sellUSD": 4.49,
+    "cost_usd": 1.26,
+    "markup_rate": 1.0
   },
   {
     "id": "p11",
@@ -332,7 +447,7 @@
     "categoryId": "CBT392452",
     "price1688": 1.71,
     "totalCost": 7.71,
-    "sellUSD": 4.99,
+    "sellUSD": 2.14,
     "netProfit": 22.47,
     "margin": 62.5,
     "competitors": 3000,
@@ -350,7 +465,20 @@
       "global": "CBT4403081923",
       "MLB": "MLB5274657313"
     },
-    "listed_at": "2026-09-22T19:10:00"
+    "listed_at": "2026-09-22T19:10:00",
+    "images": [
+      "https://http2.mlstatic.com/D_665543-CBT116546409650_092026-O.jpg",
+      "https://http2.mlstatic.com/D_831623-CBT118055194971_092026-O.jpg",
+      "https://http2.mlstatic.com/D_794671-CBT118054721019_092026-O.jpg",
+      "https://http2.mlstatic.com/D_815096-CBT118056893223_092026-O.jpg",
+      "https://http2.mlstatic.com/D_893685-CBT118057337219_092026-O.jpg",
+      "https://http2.mlstatic.com/D_849173-CBT118056923319_092026-O.jpg"
+    ],
+    "images_synced_at": "2026-09-24T17:34:31.721185",
+    "images_source": "ml_api",
+    "old_sellUSD": 4.99,
+    "cost_usd": 1.07,
+    "markup_rate": 1.0
   },
   {
     "id": "p12",
@@ -361,7 +489,7 @@
     "categoryId": "CBT1667",
     "price1688": 9.8,
     "totalCost": 15.8,
-    "sellUSD": 8.99,
+    "sellUSD": 3.73,
     "netProfit": 38.57,
     "margin": 59.6,
     "competitors": 150,
@@ -375,7 +503,10 @@
     "moq": 2,
     "monthly_sales": "100+",
     "supplier_notes": "支持一件代发,1080P款含三角支架,免驱动USB2.0,内置麦克风,113g轻量,48h发货",
-    "listed_at": "2026-09-22T19:33:17"
+    "listed_at": "2026-09-22T19:33:17",
+    "old_sellUSD": 8.99,
+    "cost_usd": 2.19,
+    "markup_rate": 0.7
   },
   {
     "id": "p13",
@@ -386,7 +517,7 @@
     "categoryId": "CBT370459",
     "price1688": 2.5,
     "totalCost": 8.5,
-    "sellUSD": 4.99,
+    "sellUSD": 2.36,
     "netProfit": 21.68,
     "margin": 60.3,
     "competitors": 300,
@@ -412,7 +543,20 @@
       "global": "CBT4403105711",
       "MLB": "MLB7683865992"
     },
-    "listed_at": "2026-09-22T19:14:15"
+    "listed_at": "2026-09-22T19:14:15",
+    "images": [
+      "https://http2.mlstatic.com/D_601802-CBT118054961945_092026-O.jpg",
+      "https://http2.mlstatic.com/D_732171-CBT118054784551_092026-O.jpg",
+      "https://http2.mlstatic.com/D_933802-CBT118054933065_092026-O.jpg",
+      "https://http2.mlstatic.com/D_925517-CBT118057395713_092026-O.jpg",
+      "https://http2.mlstatic.com/D_951851-CBT118056982941_092026-O.jpg",
+      "https://http2.mlstatic.com/D_660589-CBT116549117440_092026-O.jpg"
+    ],
+    "images_synced_at": "2026-09-24T17:34:32.322319",
+    "images_source": "ml_api",
+    "old_sellUSD": 4.99,
+    "cost_usd": 1.18,
+    "markup_rate": 1.0
   },
   {
     "id": "p14",
@@ -423,7 +567,7 @@
     "categoryId": "CBT1667",
     "price1688": 15.2,
     "totalCost": 21.2,
-    "sellUSD": 11.99,
+    "sellUSD": 5.01,
     "netProfit": 51.32,
     "margin": 59.4,
     "competitors": 200,
@@ -443,14 +587,19 @@
     },
     "listed_at": "2026-09-22T19:30:49",
     "images": [
-      "https://s.coze.cn/image/9VI3fP98IuQ/",
-      "https://s.coze.cn/image/9UWZLk9VBYs/",
-      "https://s.coze.cn/image/20744ETt0kU/",
-      "https://s.coze.cn/image/01AHcw4C2jU/",
-      "https://s.coze.cn/image/lg8tLq2vVgM/"
+      "https://http2.mlstatic.com/D_648276-CBT116580522306_092026-O.jpg",
+      "https://http2.mlstatic.com/D_601871-CBT116580726352_092026-O.jpg",
+      "https://http2.mlstatic.com/D_856921-CBT116581132042_092026-O.jpg",
+      "https://http2.mlstatic.com/D_779446-CBT118091007437_092026-O.jpg",
+      "https://http2.mlstatic.com/D_736359-CBT116581249382_092026-O.jpg"
     ],
     "images_fixed_at": "2026-09-23T12:27:53",
-    "images_fixed_note": "统一Type-C接口无线领夹麦克风（5张>=600px）"
+    "images_fixed_note": "统一Type-C接口无线领夹麦克风（5张>=600px）",
+    "images_synced_at": "2026-09-24T17:34:37.126463",
+    "images_source": "ml_api",
+    "old_sellUSD": 11.99,
+    "cost_usd": 2.94,
+    "markup_rate": 0.7
   },
   {
     "id": "p15",
@@ -461,7 +610,7 @@
     "categoryId": "CBT392132",
     "price1688": 3.0,
     "totalCost": 9.0,
-    "sellUSD": 7.99,
+    "sellUSD": 2.5,
     "netProfit": 39.32,
     "margin": 68.4,
     "competitors": 300,
@@ -481,14 +630,19 @@
     },
     "listed_at": "2026-09-22T19:17:34",
     "images": [
-      "https://s.coze.cn/image/6iXJ4j6dgF0/",
-      "https://s.coze.cn/image/vf6Kh7ugRMo/",
-      "https://s.coze.cn/image/d0nmjd3PEqg/",
-      "https://s.coze.cn/image/5WnAZ5yOM9Q/",
-      "https://s.coze.cn/image/yYGfo4_PKtc/"
+      "https://http2.mlstatic.com/D_992719-CBT118090686729_092026-O.jpg",
+      "https://http2.mlstatic.com/D_663021-CBT118090891149_092026-O.jpg",
+      "https://http2.mlstatic.com/D_772253-CBT118091184945_092026-O.jpg",
+      "https://http2.mlstatic.com/D_951255-CBT118090686945_092026-O.jpg",
+      "https://http2.mlstatic.com/D_751142-CBT118090687017_092026-O.jpg"
     ],
     "images_fixed_at": "2026-09-23T12:26:16",
-    "images_fixed_note": "桌面迷你三脚架（黑色款，统一款式）"
+    "images_fixed_note": "桌面迷你三脚架（黑色款，统一款式）",
+    "images_synced_at": "2026-09-24T17:34:37.659285",
+    "images_source": "ml_api",
+    "old_sellUSD": 7.99,
+    "cost_usd": 1.25,
+    "markup_rate": 1.0
   },
   {
     "id": "p16",
@@ -499,7 +653,7 @@
     "categoryId": "CBT370459",
     "price1688": 6.65,
     "totalCost": 12.65,
-    "sellUSD": 6.99,
+    "sellUSD": 3.51,
     "netProfit": 29.63,
     "margin": 58.9,
     "competitors": 500,
@@ -535,7 +689,10 @@
       "https://cbu01.alicdn.com/img/ibank/O1CN015UDjk91TXaSUfx047_!!984092392-0-cib.jpg"
     ],
     "images_fixed_at": "2026-09-23T10:45:56",
-    "images_fixed_note": "统一黑色可伸缩牵引绳 6张"
+    "images_fixed_note": "统一黑色可伸缩牵引绳 6张",
+    "old_sellUSD": 6.99,
+    "cost_usd": 1.76,
+    "markup_rate": 1.0
   },
   {
     "id": "p17",
@@ -546,7 +703,7 @@
     "categoryId": "CBT389336",
     "price1688": 4.5,
     "totalCost": 10.5,
-    "sellUSD": 5.99,
+    "sellUSD": 2.92,
     "netProfit": 25.73,
     "margin": 59.7,
     "competitors": 10000,
@@ -567,12 +724,18 @@
     "listed_at": "2026-09-23T19:43:53",
     "global": "CBT4411818969",
     "images": [
-      "https://s.coze.cn/image/N-3HWED7SPI/",
-      "https://s.coze.cn/image/rLFE7QMUdjo/",
-      "https://s.coze.cn/image/_Bo6TjlaV4U/",
-      "https://s.coze.cn/image/cUmoZ1nB-b4/",
-      "https://s.coze.cn/image/2FcJYglOooY/"
-    ]
+      "https://http2.mlstatic.com/D_934297-CBT118111886507_092026-O.jpg",
+      "https://http2.mlstatic.com/D_966346-CBT116601213854_092026-O.jpg",
+      "https://http2.mlstatic.com/D_644665-CBT116601214310_092026-O.jpg",
+      "https://http2.mlstatic.com/D_759081-CBT116601508870_092026-O.jpg",
+      "https://http2.mlstatic.com/D_684620-CBT118112122815_092026-O.jpg",
+      "https://http2.mlstatic.com/D_934438-CBT118112199301_092026-O.jpg"
+    ],
+    "images_synced_at": "2026-09-24T17:34:38.189466",
+    "images_source": "ml_api",
+    "old_sellUSD": 5.99,
+    "cost_usd": 1.46,
+    "markup_rate": 1.0
   },
   {
     "id": "p18",
@@ -583,7 +746,7 @@
     "categoryId": "CBT392132",
     "price1688": 45.0,
     "totalCost": 51.0,
-    "sellUSD": 34.99,
+    "sellUSD": 10.62,
     "netProfit": 160.62,
     "margin": 63.8,
     "competitors": 150,
@@ -611,7 +774,10 @@
       "https://s.alicdn.com/@sc04/kf/Hfaf6c8b109eb440da2016404fec54ac0l.jpg"
     ],
     "images_fixed_at": "2026-09-23T12:26:16",
-    "images_fixed_note": "50合1运动相机配件套装（统一套装图片）"
+    "images_fixed_note": "50合1运动相机配件套装（统一套装图片）",
+    "old_sellUSD": 34.99,
+    "cost_usd": 7.08,
+    "markup_rate": 0.5
   },
   {
     "id": "p19",
@@ -622,7 +788,7 @@
     "categoryId": "CBT392132",
     "price1688": 135.0,
     "totalCost": 141.0,
-    "sellUSD": 29.99,
+    "sellUSD": 27.42,
     "netProfit": 40.38,
     "margin": 18.7,
     "competitors": 80,
@@ -642,11 +808,15 @@
     "listed_at": "2026-09-23T19:43:53",
     "global": "CBT4411832187",
     "images": [
-      "https://s.coze.cn/image/Nwi_Q4ckoTg/",
-      "https://s.coze.cn/image/h0TrlhlmopU/",
-      "https://s.coze.cn/image/Z70dGl3lblg/",
-      "https://s.coze.cn/image/29pbmBFpqpQ/"
-    ]
+      "https://http2.mlstatic.com/D_690656-CBT116601216028_092026-O.jpg",
+      "https://http2.mlstatic.com/D_739434-CBT118111890549_092026-O.jpg",
+      "https://http2.mlstatic.com/D_623472-CBT118111890861_092026-O.jpg"
+    ],
+    "images_synced_at": "2026-09-24T17:34:38.829089",
+    "images_source": "ml_api",
+    "old_sellUSD": 29.99,
+    "cost_usd": 19.58,
+    "markup_rate": 0.4
   },
   {
     "id": "p20",
@@ -657,7 +827,7 @@
     "categoryId": "CBT458038",
     "price1688": 11.0,
     "totalCost": 17.0,
-    "sellUSD": 12.99,
+    "sellUSD": 4.01,
     "netProfit": 61.56,
     "margin": 65.8,
     "competitors": 250,
@@ -685,12 +855,17 @@
     "listed_at": "2026-09-23T19:43:53",
     "global": "CBT4411819255",
     "images": [
-      "https://s.coze.cn/image/lG2EDb2MeFU/",
-      "https://s.coze.cn/image/GOEysKqMgI4/",
-      "https://s.coze.cn/image/QnYa04BCOos/",
-      "https://s.coze.cn/image/xP5w_s9q9hk/",
-      "https://s.coze.cn/image/grZr548HIYs/"
-    ]
+      "https://http2.mlstatic.com/D_973152-CBT118111892577_092026-O.jpg",
+      "https://http2.mlstatic.com/D_656479-CBT118111880093_092026-O.jpg",
+      "https://http2.mlstatic.com/D_796360-CBT116601451028_092026-O.jpg",
+      "https://http2.mlstatic.com/D_983146-CBT116601451460_092026-O.jpg",
+      "https://http2.mlstatic.com/D_613838-CBT116601452278_092026-O.jpg"
+    ],
+    "images_synced_at": "2026-09-24T17:34:39.707725",
+    "images_source": "ml_api",
+    "old_sellUSD": 12.99,
+    "cost_usd": 2.36,
+    "markup_rate": 0.7
   },
   {
     "id": "p21",
@@ -723,11 +898,9 @@
     ],
     "description": "3米10灯LED星星灯串，USB/电池两用，暖白光，圣诞树/窗户/派对装饰",
     "images": [
-      "https://s.coze.cn/image/QAGAyiHiSPI/",
-      "https://s.coze.cn/image/hrXg5BG2np0/",
-      "https://s.coze.cn/image/1GhiTRgMYFk/",
-      "https://s.coze.cn/image/2h6AciWDLI0/",
-      "https://s.coze.cn/image/vovGZ3c0z-c/"
+      "https://http2.mlstatic.com/D_651823-CBT118064744617_092026-O.jpg",
+      "https://http2.mlstatic.com/D_739031-CBT116555843932_092026-O.jpg",
+      "https://http2.mlstatic.com/D_667065-CBT116555932008_092026-O.jpg"
     ],
     "target_market": [
       "MLB",
@@ -750,7 +923,14 @@
       "MLB": "MLB7685354134"
     },
     "listed_at": "2026-09-23T00:00:01",
-    "item_id": "CBT5304358486"
+    "item_id": "CBT5304358486",
+    "images_synced_at": "2026-09-24T17:34:40.235615",
+    "images_source": "ml_api",
+    "old_sellUSD": 0,
+    "sellUSD": 2.0,
+    "cost_usd": 1.0,
+    "markup_rate": 1.0,
+    "price1688": 1.2
   },
   {
     "id": "p22",
@@ -807,7 +987,12 @@
     "item_ids": {
       "global": "CBT5304638750",
       "MLB": "MLB7685618016"
-    }
+    },
+    "old_sellUSD": 0,
+    "sellUSD": 2.14,
+    "cost_usd": 1.07,
+    "markup_rate": 1.0,
+    "price1688": 1.71
   },
   {
     "id": "p23",
@@ -836,11 +1021,8 @@
     ],
     "description": "7kg加重玻璃珠填充毯，纯棉面料，助眠减压，150x200cm",
     "images": [
-      "https://s.coze.cn/image/Bk1bMDOO5Ng/",
-      "https://s.coze.cn/image/aB02RJxTHNE/",
-      "https://s.coze.cn/image/S02u22fFdYM/",
-      "https://s.coze.cn/image/gNjmHdag0cs/",
-      "https://s.coze.cn/image/KCKjiRaWTJs/"
+      "https://http2.mlstatic.com/D_840134-CBT116555936234_092026-O.jpg",
+      "https://http2.mlstatic.com/D_625564-CBT118064543873_092026-O.jpg"
     ],
     "target_market": [
       "MLB",
@@ -863,7 +1045,14 @@
       "MLB": "MLB5276090987"
     },
     "listed_at": "2026-09-23T00:04:20",
-    "item_id": "CBT4404887841"
+    "item_id": "CBT4404887841",
+    "images_synced_at": "2026-09-24T17:34:40.763922",
+    "images_source": "ml_api",
+    "old_sellUSD": 0,
+    "sellUSD": 5.66,
+    "cost_usd": 3.33,
+    "markup_rate": 1.0,
+    "price1688": 17.99
   },
   {
     "id": "p24",
@@ -892,11 +1081,8 @@
     ],
     "description": "500ml双层真空保温杯，304不锈钢内胆，12小时保温，防漏设计",
     "images": [
-      "https://s.coze.cn/image/zYX1ywE0uYo/",
-      "https://s.coze.cn/image/YmDkG7S6Rpg/",
-      "https://s.coze.cn/image/sl_VVZpv_24/",
-      "https://s.coze.cn/image/KNvvuL9ao0w/",
-      "https://s.coze.cn/image/oB8ExSgVXMQ/"
+      "https://http2.mlstatic.com/D_874182-CBT116556481336_092026-O.jpg",
+      "https://http2.mlstatic.com/D_648280-CBT116556656088_092026-O.jpg"
     ],
     "target_market": [
       "MLB",
@@ -920,7 +1106,14 @@
       "MLB": "MLB5276153233"
     },
     "listed_at": "2026-09-23T00:22:19",
-    "item_id": "CBT5304483672"
+    "item_id": "CBT5304483672",
+    "images_synced_at": "2026-09-24T17:34:41.300003",
+    "images_source": "ml_api",
+    "old_sellUSD": 0,
+    "sellUSD": 3.78,
+    "cost_usd": 2.22,
+    "markup_rate": 1.0,
+    "price1688": 10
   },
   {
     "id": "p25",
@@ -949,11 +1142,8 @@
     ],
     "description": "316L钛钢简约锁骨链，不退色不过敏，极简几何设计，女款",
     "images": [
-      "https://s.coze.cn/image/6WI-NefC0Ec/",
-      "https://s.coze.cn/image/kFYB4clA0qs/",
-      "https://s.coze.cn/image/6vv3Q5J4QaU/",
-      "https://s.coze.cn/image/hArugAC-dss/",
-      "https://s.coze.cn/image/8oyOrpG5lPQ/"
+      "https://http2.mlstatic.com/D_797869-CBT116556234866_092026-O.jpg",
+      "https://http2.mlstatic.com/D_962359-CBT116556058960_092026-O.jpg"
     ],
     "target_market": [
       "MLB",
@@ -976,7 +1166,14 @@
       "MLB": "MLB5276111045"
     },
     "listed_at": "2026-09-23T00:07:58",
-    "item_id": "CBT5304398164"
+    "item_id": "CBT5304398164",
+    "images_synced_at": "2026-09-24T17:34:41.835597",
+    "images_source": "ml_api",
+    "old_sellUSD": 0,
+    "sellUSD": 1.81,
+    "cost_usd": 0.9,
+    "markup_rate": 1.0,
+    "price1688": 0.5
   },
   {
     "id": "p26",
@@ -1005,11 +1202,9 @@
     ],
     "description": "3-5条装钛钢手链套装，多层叠戴风格，磁扣设计方便佩戴",
     "images": [
-      "https://s.coze.cn/image/BFgdlmtuAlw/",
-      "https://s.coze.cn/image/7uekIe_0ieM/",
-      "https://s.coze.cn/image/u4IcpsVhXu4/",
-      "https://s.coze.cn/image/U0zMDz0nDnA/",
-      "https://s.coze.cn/image/Vg3V29UI8G8/"
+      "https://http2.mlstatic.com/D_803609-CBT116556121470_092026-O.jpg",
+      "https://http2.mlstatic.com/D_941961-CBT116556296594_092026-O.jpg",
+      "https://http2.mlstatic.com/D_663131-CBT116556032142_092026-O.jpg"
     ],
     "target_market": [
       "MLB",
@@ -1032,7 +1227,14 @@
       "MLB": "MLB7685440856"
     },
     "listed_at": "2026-09-23T00:10:23",
-    "item_id": "CBT5304392838"
+    "item_id": "CBT5304392838",
+    "images_synced_at": "2026-09-24T17:34:42.777659",
+    "images_source": "ml_api",
+    "old_sellUSD": 0,
+    "sellUSD": 2.64,
+    "cost_usd": 1.32,
+    "markup_rate": 1.0,
+    "price1688": 3.5
   },
   {
     "id": "p27",
@@ -1061,11 +1263,9 @@
     ],
     "description": "6件套食品级硅胶厨具，耐高温230°C，不粘锅专用，木柄设计",
     "images": [
-      "https://s.coze.cn/image/LAk8kTp_uBo/",
-      "https://s.coze.cn/image/VcJEW2WO2pA/",
-      "https://s.coze.cn/image/njejcUybFOE/",
-      "https://s.coze.cn/image/R7Atgk3hSKM/",
-      "https://s.coze.cn/image/qNGrp1kcerY/"
+      "https://http2.mlstatic.com/D_997410-CBT116555944724_092026-O.jpg",
+      "https://http2.mlstatic.com/D_732971-CBT116556298516_092026-O.jpg",
+      "https://http2.mlstatic.com/D_957353-CBT116555800942_092026-O.jpg"
     ],
     "target_market": [
       "MLB",
@@ -1088,7 +1288,14 @@
       "MLB": "MLB7685454682"
     },
     "listed_at": "2026-09-23T00:12:15",
-    "item_id": "CBT4404925967"
+    "item_id": "CBT4404925967",
+    "images_synced_at": "2026-09-24T17:34:43.317278",
+    "images_source": "ml_api",
+    "old_sellUSD": 0,
+    "sellUSD": 2.12,
+    "cost_usd": 1.06,
+    "markup_rate": 1.0,
+    "price1688": 1.62
   },
   {
     "id": "p28",
@@ -1117,12 +1324,12 @@
     ],
     "description": "6mm加厚TPE瑜伽垫，双面防滑纹理，环保无异味，含背带",
     "images": [
-      "https://s.coze.cn/image/nWXgeyewwAk/",
-      "https://s.coze.cn/image/q_YOu8eSWdM/",
-      "https://s.coze.cn/image/gg-2Mgs68nM/",
-      "https://s.coze.cn/image/jjZjyAes00E/",
-      "https://s.coze.cn/image/dUAqhVifm9s/",
-      "https://s.coze.cn/image/2JfT9IcGKR4/"
+      "https://http2.mlstatic.com/D_741732-CBT118091068581_092026-O.jpg",
+      "https://http2.mlstatic.com/D_983901-CBT118091186045_092026-O.jpg",
+      "https://http2.mlstatic.com/D_803636-CBT118091098603_092026-O.jpg",
+      "https://http2.mlstatic.com/D_974500-CBT118091128473_092026-O.jpg",
+      "https://http2.mlstatic.com/D_863727-CBT118090949799_092026-O.jpg",
+      "https://http2.mlstatic.com/D_835862-CBT116580902706_092026-O.jpg"
     ],
     "target_market": [
       "MLB",
@@ -1147,7 +1354,14 @@
     "listed_at": "2026-09-23T00:14:03",
     "item_id": "CBT4404939697",
     "images_fixed_at": "2026-09-23T12:26:16",
-    "images_fixed_note": "黑色/深灰色TPE瑜伽垫（统一颜色）"
+    "images_fixed_note": "黑色/深灰色TPE瑜伽垫（统一颜色）",
+    "images_synced_at": "2026-09-24T17:34:43.947141",
+    "images_source": "ml_api",
+    "old_sellUSD": 0,
+    "sellUSD": 2.11,
+    "cost_usd": 1.06,
+    "markup_rate": 1.0,
+    "price1688": 1.6
   },
   {
     "id": "p29",
@@ -1176,11 +1390,9 @@
     ],
     "description": "出风口香薰夹，合金外壳+精油棉芯，多种香型可选，安装简便",
     "images": [
-      "https://s.coze.cn/image/-nB5epOq3xQ/",
-      "https://s.coze.cn/image/_-iSRnkoIZU/",
-      "https://s.coze.cn/image/X6FXbjkWiL0/",
-      "https://s.coze.cn/image/m-6xRegWD_w/",
-      "https://s.coze.cn/image/tUILJjAftH0/"
+      "https://http2.mlstatic.com/D_989276-CBT118065927277_092026-O.jpg",
+      "https://http2.mlstatic.com/D_972536-CBT118065927299_092026-O.jpg",
+      "https://http2.mlstatic.com/D_798698-CBT118065897579_092026-O.jpg"
     ],
     "target_market": [
       "MLB",
@@ -1204,7 +1416,14 @@
       "global": "CBT4404995203",
       "MLB": "MLB7685484252"
     },
-    "item_id": "CBT4404995203"
+    "item_id": "CBT4404995203",
+    "images_synced_at": "2026-09-24T17:34:44.473967",
+    "images_source": "ml_api",
+    "old_sellUSD": 0,
+    "sellUSD": 1.71,
+    "cost_usd": 0.86,
+    "markup_rate": 1.0,
+    "price1688": 0.16
   },
   {
     "id": "p30",
@@ -1233,11 +1452,10 @@
     ],
     "description": "汽车座椅缝隙收纳盒，PU皮革+ABS，防掉落手机/钥匙/卡片",
     "images": [
-      "https://s.coze.cn/image/oeCYYfMBIQI/",
-      "https://s.coze.cn/image/0JFbMA_h-mY/",
-      "https://s.coze.cn/image/H4nPKoxfexw/",
-      "https://s.coze.cn/image/KwWpiYmpNvE/",
-      "https://s.coze.cn/image/cu_zdKg5DXE/"
+      "https://http2.mlstatic.com/D_955729-CBT118066483903_092026-O.jpg",
+      "https://http2.mlstatic.com/D_789285-CBT118066309971_092026-O.jpg",
+      "https://http2.mlstatic.com/D_716284-CBT118066222209_092026-O.jpg",
+      "https://http2.mlstatic.com/D_796672-CBT116557695568_092026-O.jpg"
     ],
     "target_market": [
       "MLB",
@@ -1260,7 +1478,14 @@
     "item_ids": {
       "global": "CBT4405149647",
       "MLB": "MLB5276301987"
-    }
+    },
+    "images_synced_at": "2026-09-24T17:34:45.361726",
+    "images_source": "ml_api",
+    "old_sellUSD": 0,
+    "sellUSD": 3.31,
+    "cost_usd": 1.65,
+    "markup_rate": 1.0,
+    "price1688": 5.9
   },
   {
     "id": "p31",
@@ -1272,7 +1497,7 @@
     "categoryId": "CBT370459",
     "price1688": 2.9,
     "totalCost": 8.9,
-    "sellUSD": 8.99,
+    "sellUSD": 2.47,
     "netProfit": 75.9,
     "margin": 67.9,
     "competitors": 300,
@@ -1289,11 +1514,9 @@
     "weight_g": 30,
     "description": "USB充电LED发光宠物项圈，可调节长度，夜间遛狗安全防丢，防水设计，多色可选",
     "images": [
-      "https://s.coze.cn/image/2JoEa4RwT8U/",
-      "https://s.coze.cn/image/udkTAObseHU/",
-      "https://s.coze.cn/image/gw87PKIgB0o/",
-      "https://s.coze.cn/image/TS8SKXL9Tw0/",
-      "https://s.coze.cn/image/cTliEq23Hb4/"
+      "https://http2.mlstatic.com/D_737607-CBT116601924840_092026-O.jpg",
+      "https://http2.mlstatic.com/D_711263-CBT118112407687_092026-O.jpg",
+      "https://http2.mlstatic.com/D_981484-CBT116601926176_092026-O.jpg"
     ],
     "variant": {
       "color": "blue",
@@ -1320,7 +1543,12 @@
     },
     "listed_at": "2026-09-23T19:51:25",
     "global": "CBT5311441748",
-    "mlb_id": "MLB5280891133"
+    "mlb_id": "MLB5280891133",
+    "images_synced_at": "2026-09-24T17:34:45.971420",
+    "images_source": "ml_api",
+    "old_sellUSD": 8.99,
+    "cost_usd": 1.24,
+    "markup_rate": 1.0
   },
   {
     "id": "p32",
@@ -1332,7 +1560,7 @@
     "categoryId": "CBT389307",
     "price1688": 1.79,
     "totalCost": 7.79,
-    "sellUSD": 7.99,
+    "sellUSD": 2.16,
     "netProfit": 77.4,
     "margin": 62.1,
     "competitors": 200,
@@ -1349,10 +1577,9 @@
     "weight_g": 80,
     "description": "3根装无热卷发棒，加粗3cm大波浪设计，橡胶材质不伤发，睡眠懒人卷发神器",
     "images": [
-      "https://s.coze.cn/image/YWwqjFZ8YQY/",
-      "https://s.coze.cn/image/Nq3VGY8xZ3c/",
-      "https://s.coze.cn/image/AWp3KDO9h3E/",
-      "https://s.coze.cn/image/UvmJHD2ucFo/"
+      "https://http2.mlstatic.com/D_985482-CBT118112436485_092026-O.jpg",
+      "https://http2.mlstatic.com/D_808729-CBT118112455213_092026-O.jpg",
+      "https://http2.mlstatic.com/D_760014-CBT118112456067_092026-O.jpg"
     ],
     "variant": {
       "color": "pink",
@@ -1379,7 +1606,12 @@
     },
     "listed_at": "2026-09-23T19:43:53",
     "global": "CBT4411735043",
-    "mlb_id": "MLB5280645079"
+    "mlb_id": "MLB5280645079",
+    "images_synced_at": "2026-09-24T17:34:46.960705",
+    "images_source": "ml_api",
+    "old_sellUSD": 7.99,
+    "cost_usd": 1.08,
+    "markup_rate": 1.0
   },
   {
     "id": "p33",
@@ -1391,7 +1623,7 @@
     "categoryId": "CBT389307",
     "price1688": 8.0,
     "totalCost": 14.0,
-    "sellUSD": 9.99,
+    "sellUSD": 3.89,
     "netProfit": 63.8,
     "margin": 43.0,
     "competitors": 100,
@@ -1408,11 +1640,10 @@
     "weight_g": 80,
     "description": "USB充电电动磨脚器，可替换磨砂磨头，多档可调，去死皮老茧，足部嫩滑护理",
     "images": [
-      "https://s.coze.cn/image/kfwQvrMPZlQ/",
-      "https://s.coze.cn/image/eBiL8rtagfc/",
-      "https://s.coze.cn/image/OidAmq288hQ/",
-      "https://s.coze.cn/image/ULOimdWk9Yo/",
-      "https://s.coze.cn/image/djigYHeOWZ8/"
+      "https://http2.mlstatic.com/D_683383-CBT118111916265_092026-O.jpg",
+      "https://http2.mlstatic.com/D_603214-CBT116601256926_092026-O.jpg",
+      "https://http2.mlstatic.com/D_793983-CBT118111916777_092026-O.jpg",
+      "https://http2.mlstatic.com/D_778956-CBT118111918183_092026-O.jpg"
     ],
     "variant": {
       "color": "white",
@@ -1437,7 +1668,12 @@
       "MLB": "MLB5280783217"
     },
     "listed_at": "2026-09-23T19:43:53",
-    "global": "CBT5311580742"
+    "global": "CBT5311580742",
+    "images_synced_at": "2026-09-24T17:34:47.520677",
+    "images_source": "ml_api",
+    "old_sellUSD": 9.99,
+    "cost_usd": 1.94,
+    "markup_rate": 1.0
   },
   {
     "id": "p34",
@@ -1449,7 +1685,7 @@
     "categoryId": "CBT458038",
     "price1688": 3.14,
     "totalCost": 9.14,
-    "sellUSD": 7.99,
+    "sellUSD": 2.54,
     "netProfit": 57.4,
     "margin": 42.5,
     "competitors": 500,
@@ -1466,10 +1702,8 @@
     "weight_g": 150,
     "description": "宠物慢食碗防噎设计，食品级塑料材质，骨骼凸起造型减缓进食速度，防打翻底座",
     "images": [
-      "https://s.coze.cn/image/TrJVtAj_hd0/",
-      "https://s.coze.cn/image/T_ghAT1hgq0/",
-      "https://s.coze.cn/image/qAFLqH1ebnk/",
-      "https://s.coze.cn/image/2QlcvvA9fWo/"
+      "https://http2.mlstatic.com/D_891484-CBT116601232662_092026-O.jpg",
+      "https://http2.mlstatic.com/D_910191-CBT118111903979_092026-O.jpg"
     ],
     "variant": {
       "color": "blue",
@@ -1494,7 +1728,12 @@
       "MLB": "MLB7690513436"
     },
     "listed_at": "2026-09-23T19:43:53",
-    "global": "CBT4411804209"
+    "global": "CBT4411804209",
+    "images_synced_at": "2026-09-24T17:34:48.053855",
+    "images_source": "ml_api",
+    "old_sellUSD": 7.99,
+    "cost_usd": 1.27,
+    "markup_rate": 1.0
   },
   {
     "id": "p35",
@@ -1506,7 +1745,7 @@
     "categoryId": "CBT1659",
     "price1688": 3.0,
     "totalCost": 9.0,
-    "sellUSD": 7.99,
+    "sellUSD": 2.5,
     "netProfit": 63.8,
     "margin": 43.0,
     "competitors": 300,
@@ -1523,10 +1762,10 @@
     "weight_g": 30,
     "description": "6合1磁吸充电数据线，Type-C/Micro/Lightning三接口兼容，编织线材耐用，磁吸收纳不打结",
     "images": [
-      "https://s.coze.cn/image/QqmXjN_y3Ds/",
-      "https://s.coze.cn/image/m1xSQMOEaPM/",
-      "https://s.coze.cn/image/Keo1Z1PmxyQ/",
-      "https://s.coze.cn/image/mUiWcfnFT5w/"
+      "https://http2.mlstatic.com/D_624441-CBT118116827077_092026-O.jpg",
+      "https://http2.mlstatic.com/D_904155-CBT116604741132_092026-O.jpg",
+      "https://http2.mlstatic.com/D_949451-CBT118115696921_092026-O.jpg",
+      "https://http2.mlstatic.com/D_999370-CBT116604786086_092026-O.jpg"
     ],
     "variant": {
       "color": "black",
@@ -1552,7 +1791,12 @@
       "global": "CBT4413154093"
     },
     "listed_at": "2026-09-23T22:30:00",
-    "global": "CBT4413154093"
+    "global": "CBT4413154093",
+    "images_synced_at": "2026-09-24T17:34:48.583424",
+    "images_source": "ml_api",
+    "old_sellUSD": 7.99,
+    "cost_usd": 1.25,
+    "markup_rate": 1.0
   },
   {
     "id": "p36",
@@ -1564,7 +1808,7 @@
     "categoryId": "CBT392452",
     "price1688": 8.9,
     "totalCost": 14.9,
-    "sellUSD": 9.99,
+    "sellUSD": 3.52,
     "netProfit": 41.2,
     "margin": 34.1,
     "competitors": 150,
@@ -1581,10 +1825,10 @@
     "weight_g": 120,
     "description": "超声波电动硅胶洁面仪，USB充电，IPX7防水，多档震动力度，深层清洁毛孔",
     "images": [
-      "https://s.coze.cn/image/Xq9M-D0E5XI/",
-      "https://s.coze.cn/image/bYhiwSyUhKw/",
-      "https://s.coze.cn/image/EPXmzsoFfj8/",
-      "https://s.coze.cn/image/hauNe4p_PvE/"
+      "https://http2.mlstatic.com/D_754289-CBT116601234906_092026-O.jpg",
+      "https://http2.mlstatic.com/D_604358-CBT116601235194_092026-O.jpg",
+      "https://http2.mlstatic.com/D_709962-CBT116601504462_092026-O.jpg",
+      "https://http2.mlstatic.com/D_805023-CBT118112196575_092026-O.jpg"
     ],
     "variant": {
       "color": "pink",
@@ -1610,7 +1854,12 @@
       "MLB": "MLB7690513498"
     },
     "listed_at": "2026-09-23T19:43:53",
-    "global": "CBT5311591476"
+    "global": "CBT5311591476",
+    "images_synced_at": "2026-09-24T17:34:49.116076",
+    "images_source": "ml_api",
+    "old_sellUSD": 9.99,
+    "cost_usd": 2.07,
+    "markup_rate": 0.7
   },
   {
     "id": "p37",
@@ -1622,7 +1871,7 @@
     "categoryId": "CBT456931",
     "price1688": 1.52,
     "totalCost": 7.52,
-    "sellUSD": 5.99,
+    "sellUSD": 2.09,
     "netProfit": 61.3,
     "margin": 38.8,
     "competitors": 2000,
@@ -1639,11 +1888,12 @@
     "weight_g": 100,
     "description": "迷你手压封口机，便携家用，零食袋塑料防潮密封，电池驱动热封",
     "images": [
-      "https://s.coze.cn/image/5wkY113bPJI/",
-      "https://s.coze.cn/image/-SZVl2XUj7Y/",
-      "https://s.coze.cn/image/tdk9kuEQRIg/",
-      "https://s.coze.cn/image/GQghSAf8oVs/",
-      "https://s.coze.cn/image/Mlyjl2uTRpc/"
+      "https://http2.mlstatic.com/D_700880-CBT118111907763_092026-O.jpg",
+      "https://http2.mlstatic.com/D_970084-CBT118111923993_092026-O.jpg",
+      "https://http2.mlstatic.com/D_657610-CBT118111925911_092026-O.jpg",
+      "https://http2.mlstatic.com/D_624756-CBT116601456240_092026-O.jpg",
+      "https://http2.mlstatic.com/D_880141-CBT116601456602_092026-O.jpg",
+      "https://http2.mlstatic.com/D_838109-CBT116601526848_092026-O.jpg"
     ],
     "variant": {
       "color": "white",
@@ -1668,7 +1918,12 @@
       "MLB": "MLB5280783885"
     },
     "listed_at": "2026-09-23T19:43:53",
-    "global": "CBT5311569786"
+    "global": "CBT5311569786",
+    "images_synced_at": "2026-09-24T17:34:49.648130",
+    "images_source": "ml_api",
+    "old_sellUSD": 5.99,
+    "cost_usd": 1.04,
+    "markup_rate": 1.0
   },
   {
     "id": "p38",
@@ -1680,7 +1935,7 @@
     "categoryId": "CBT4403081923",
     "price1688": 2.6,
     "totalCost": 8.6,
-    "sellUSD": 6.99,
+    "sellUSD": 2.39,
     "netProfit": 54.4,
     "margin": 37.1,
     "competitors": 150,
@@ -1696,7 +1951,10 @@
     "supplier_notes": "3年店,浙江金华,硅胶握力圈,手指康复训练,跨境热销",
     "weight_g": 50,
     "description": "硅胶手指握力器，多力度可选，康复训练/健身/解压多功能，便携轻巧",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/D_864883-CBT116601267742_092026-O.jpg",
+      "https://http2.mlstatic.com/D_764218-CBT116601243106_092026-O.jpg"
+    ],
     "variant": {
       "color": "purple",
       "color_cn": "紫色",
@@ -1720,7 +1978,12 @@
       "MLB": "MLB7690527162"
     },
     "listed_at": "2026-09-23T19:43:53",
-    "global": "CBT4411843173"
+    "global": "CBT4411843173",
+    "images_synced_at": "2026-09-24T17:34:50.180878",
+    "images_source": "ml_api",
+    "old_sellUSD": 6.99,
+    "cost_usd": 1.19,
+    "markup_rate": 1.0
   },
   {
     "id": "p39",
@@ -1732,7 +1995,7 @@
     "categoryId": "CBT456931",
     "price1688": 8.5,
     "totalCost": 14.5,
-    "sellUSD": 14.99,
+    "sellUSD": 3.42,
     "netProfit": 52.1,
     "margin": 27.3,
     "competitors": 300,
@@ -1748,7 +2011,12 @@
     "supplier_notes": "2年店,浙江温州,跨境2026新款搅拌杯,全自动保温智能测温磁力",
     "weight_g": 350,
     "description": "全自动磁力搅拌杯，USB充电，一键自动搅拌，不锈钢内胆，咖啡/奶粉/蛋白粉适用",
-    "images": [],
+    "images": [
+      "https://http2.mlstatic.com/D_941817-CBT118111932869_092026-O.jpg",
+      "https://http2.mlstatic.com/D_850377-CBT116601247732_092026-O.jpg",
+      "https://http2.mlstatic.com/D_887412-CBT116601510386_092026-O.jpg",
+      "https://http2.mlstatic.com/D_889021-CBT116601524714_092026-O.jpg"
+    ],
     "variant": {
       "color": "black",
       "color_cn": "黑色",
@@ -1772,7 +2040,12 @@
       "MLB": "MLB7690544392"
     },
     "listed_at": "2026-09-23T19:43:53",
-    "global": "CBT4411841467"
+    "global": "CBT4411841467",
+    "images_synced_at": "2026-09-24T17:34:50.831229",
+    "images_source": "ml_api",
+    "old_sellUSD": 14.99,
+    "cost_usd": 2.01,
+    "markup_rate": 0.7
   },
   {
     "id": "p40",
@@ -1784,7 +2057,7 @@
     "categoryId": "CBT392132",
     "price1688": 13.8,
     "totalCost": 19.8,
-    "sellUSD": 14.99,
+    "sellUSD": 4.67,
     "netProfit": 46.6,
     "margin": 34.0,
     "competitors": 800,
@@ -1801,10 +2074,9 @@
     "weight_g": 200,
     "description": "USB星空投影灯，车载/家用两用，浪漫满天星效果，LED小夜灯氛围灯，鹅颈可调角度",
     "images": [
-      "https://s.coze.cn/image/ilsPp4K3PTU/",
-      "https://s.coze.cn/image/8N0oWUcMDMY/",
-      "https://s.coze.cn/image/NRB6gNXMqmE/",
-      "https://s.coze.cn/image/fot7Dw18dsY/"
+      "https://http2.mlstatic.com/D_848326-CBT118111937183_092026-O.jpg",
+      "https://http2.mlstatic.com/D_611219-CBT118111937851_092026-O.jpg",
+      "https://http2.mlstatic.com/D_887770-CBT116601277334_092026-O.jpg"
     ],
     "variant": {
       "color": "white",
@@ -1832,6 +2104,11 @@
     },
     "listed_at": "2026-09-23T19:43:53",
     "global": "CBT4411846161",
-    "mlb_id": "MLB5280873329"
+    "mlb_id": "MLB5280873329",
+    "images_synced_at": "2026-09-24T17:34:51.814317",
+    "images_source": "ml_api",
+    "old_sellUSD": 14.99,
+    "cost_usd": 2.75,
+    "markup_rate": 0.7
   }
 ]
