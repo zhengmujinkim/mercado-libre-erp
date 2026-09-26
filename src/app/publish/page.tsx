@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 
+import ImageCheckPanel from '@/components/ImageCheckPanel';
 interface PublishResult {
   success: boolean;
   itemId?: string;
@@ -37,8 +38,11 @@ export default function PublishPage() {
   };
 
   const urls = imageUrls.split('\n').map(s => s.trim()).filter(Boolean);
+  const [imageCheckOpen, setImageCheckOpen] = useState(false);
 
   const handleSubmit = async () => {
+  const [imageCheckOpen, setImageCheckOpen] = useState(false);
+
     if (!categoryId || !title || !netProceeds || urls.length === 0 || sites.length === 0) {
       alert('请填写 CBT品类、标题、净收益，至少1个站点和1张图片URL');
       return;
@@ -168,6 +172,10 @@ export default function PublishPage() {
               <p className="text-red-600 dark:text-red-400 text-sm">发布失败：{result.error}</p>
             </div>
           )}
+
+          {/* 图片检测面板 */}
+          <ImageCheckPanel images={urls} />
+
 
           <button onClick={handleSubmit} disabled={loading}
             className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg disabled:opacity-50">

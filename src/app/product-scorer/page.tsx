@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from 'react';
+import AiDecisionPanel from '@/components/AiDecisionPanel';
 import { scoreProduct, SITE_PARAMS, EXAMPLE_PRODUCTS, ProductInput, ScoreResult, SiteId } from '@/lib/scorer';
 
 const SITE_OPTIONS: { id: SiteId; name: string }[] = [
@@ -96,6 +97,17 @@ export default function ProductScorerPage() {
           数据可从美客多后台趋势榜、蓝鲸BI等工具或竞品页面估算。定性项不会填就保持默认，系统按中性值计分；自动爬取美客多数据将在数据源接通后上线。
         </div>
       </div>
+
+
+      {/* AI 决策模型面板 */}
+      <AiDecisionPanel
+        productName={form.name}
+        category={form.category}
+        site={form.site}
+        purchasePriceCNY={form.purchasePriceCNY}
+        sellingPriceUSD={form.sellingPriceUSD}
+        weightG={form.weightG}
+      />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* 左侧表单 */}
