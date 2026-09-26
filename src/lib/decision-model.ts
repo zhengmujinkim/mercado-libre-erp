@@ -7,7 +7,7 @@
 // 专攻规则难以量化的维度（合规可售、侵权风险、物流适配、差异化、综合潜力）。
 // 无 Key / 调用失败时返回 null，由上层静默降级到纯本地引擎，不阻断主流程。
 
-const DEFAULT_ENDPOINT = 'https://dashscope.aliyuncs.com/compatible-mode/v1/systemone';
+const DEFAULT_ENDPOINT = 'https://ws-9tyny6h9m7c7ksr8.cn-beijing.maas.aliyuncs.com/compatible-mode/v1/systemone';
 const MODEL = 'decision-model-preview';
 const DEFAULT_TIMEOUT_MS = 8000;
 

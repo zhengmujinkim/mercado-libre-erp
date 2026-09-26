@@ -2083,12 +2083,12 @@
     "weight_g": 350,
     "description": "全自动磁力搅拌杯，USB充电，一键自动搅拌，不锈钢内胆，咖啡/奶粉/蛋白粉适用",
     "images": [
-      "https://cbu01.alicdn.com/img/ibank/O1CN012H4vMt2NT6ujzq93t_!!2211428479963-0-cib.jpg",
-      "https://cbu01.alicdn.com/img/ibank/O1CN01o0ykLx2NT6ufJXS1Q_!!2211428479963-0-cib.jpg",
-      "https://cbu01.alicdn.com/img/ibank/O1CN01C4pcI32NT6uarWwZq_!!2211428479963-0-cib.jpg",
-      "https://cbu01.alicdn.com/img/ibank/O1CN01iyT2eT2NT6ufJX7Dx_!!2211428479963-0-cib.jpg",
-      "https://cbu01.alicdn.com/img/ibank/O1CN01eG3m6l2NT6ueLxJVX_!!2211428479963-0-cib.jpg",
-      "https://cbu01.alicdn.com/img/ibank/O1CN012ryBdw2NT6ueLxBD0_!!2211428479963-0-cib.jpg"
+      "https://cbu01.alicdn.com/img/ibank/O1CN01YkMAUw2NT6rpOnY3W_!!2211428479963-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01jBMXnSvK1tJ1chua_!!2222066808998-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01iS7Xx21gC909zGIwU_!!2219704714105-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01wzXiyE2FCbo3njMrv_!!1112428844-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN01ORhoSE1fXNNud9nYj_!!2207631154016-0-cib.jpg",
+      "https://cbu01.alicdn.com/img/ibank/O1CN011mdAdo1UirXY3dBQ3_!!2200536522552-0-cib.jpg"
     ],
     "variant": {
       "color": "black",
@@ -2114,7 +2114,7 @@
     },
     "listed_at": "2026-09-23T19:43:53",
     "global": "CBT4411841467",
-    "images_synced_at": "2026-09-25T11:56:17.178916",
+    "images_synced_at": "2026-09-25T12:24:29.636652",
     "images_source": "1688_search",
     "old_sellUSD": 14.99,
     "cost_usd": 2.01,
@@ -2147,12 +2147,9 @@
     "weight_g": 200,
     "description": "USB星空投影灯，车载/家用两用，浪漫满天星效果，LED小夜灯氛围灯，鹅颈可调角度",
     "images": [
-      "https://cbu01.alicdn.com/img/ibank/O1CN01NDO6eM1V31Kb59HYL_!!2742832596-0-cib.jpg",
-      "https://cbu01.alicdn.com/img/ibank/O1CN01169q351tBlfruOJwz_!!2217898685864-0-cib.jpg",
-      "https://cbu01.alicdn.com/img/ibank/O1CN01aM3wVI20ny1ZaIlna_!!2216489706895-0-cib.jpg",
-      "https://cbu01.alicdn.com/img/ibank/O1CN01NtBe5S2EDhFumMBY7_!!1752338711-0-cib.jpg",
-      "https://cbu01.alicdn.com/img/ibank/O1CN013RdVBm1d8X1KzTXE2_!!2219501853691-0-cib.jpg",
-      "https://cbu01.alicdn.com/img/ibank/O1CN01TuxnDw1viOx8nHGsX_!!3408016206-0-cib.jpg"
+      "https://http2.mlstatic.com/D_848326-CBT118111937183_092026-O.jpg",
+      "https://http2.mlstatic.com/D_611219-CBT118111937851_092026-O.jpg",
+      "https://http2.mlstatic.com/D_887770-CBT116601277334_092026-O.jpg"
     ],
     "variant": {
       "color": "white",
@@ -2181,8 +2178,8 @@
     "listed_at": "2026-09-23T19:43:53",
     "global": "CBT4411846161",
     "mlb_id": "MLB5280873329",
-    "images_synced_at": "2026-09-25T11:56:19.589020",
-    "images_source": "1688_search",
+    "images_synced_at": "2026-09-24T17:34:51.814317",
+    "images_source": "ml_api",
     "old_sellUSD": 14.99,
     "cost_usd": 2.75,
     "markup_rate": 0.7
