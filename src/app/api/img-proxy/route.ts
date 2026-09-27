@@ -1,21 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { fetchFromAlicdn, isAllowedAlicdnHost } from '@/lib/alicdn';
 
-// 1688/alicdn 图片代理：服务器侧取图，绕过浏览器防盗链与跨域
+// 1688/alicdn 图片代理：多镜像轮换 + 浏览器全套头
 // GET /api/img-proxy?u=<encoded alicdn url>
 export const dynamic = 'force-dynamic';
-export const maxDuration = 30;
-
-const ALLOWED_HOSTS = [
-  'cbu01.alicdn.com',
-  'cbu02.alicdn.com',
-  'cbu03.alicdn.com',
-  'cbu04.alicdn.com',
-  'img.alicdn.com',
-  'sc01.alicdn.com',
-  'sc02.alicdn.com',
-  'sc03.alicdn.com',
-  'sc04.alicdn.com',
-];
+export const maxDuration = 60;
 
 export async function GET(req: NextRequest) {
   const u = req.nextUrl.searchParams.get('u');
@@ -30,31 +19,27 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'invalid url' }, { status: 400 });
   }
 
-  if (!ALLOWED_HOSTS.includes(target.hostname)) {
+  if (!isAllowedAlicdnHost(target.hostname)) {
     return NextResponse.json({ error: 'host not allowed' }, { status: 403 });
   }
 
-  const upstream = await fetch(target.toString(), {
-    headers: {
-      Referer: 'https://detail.1688.com/',
-      'User-Agent':
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36',
-      Accept: 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
-    },
-    cache: 'no-store',
-  });
+  const res = await fetchFromAlicdn(target);
 
-  const buf = await upstream.arrayBuffer();
-  const ct = upstream.headers.get('content-type') || 'image/jpeg';
+  if (!res.ok) {
+    return NextResponse.json(
+      { error: 'all mirrors failed', attempts: res.attempts },
+      { status: 502 }
+    );
+  }
 
-  return new NextResponse(buf, {
-    status: upstream.status,
+  return new NextResponse(res.buf, {
+    status: 200,
     headers: {
-      'Content-Type': ct,
+      'Content-Type': res.contentType,
       'Cache-Control': 'public, max-age=86400',
       'Access-Control-Allow-Origin': '*',
-      'X-Upstream-Status': String(upstream.status),
-      'X-Bytes': String(buf.byteLength),
+      'X-Upstream-Host': res.usedHost,
+      'X-Bytes': String(res.buf.byteLength),
     },
   });
 }
