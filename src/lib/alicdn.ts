@@ -7,6 +7,7 @@ export const ALLOWED_HOSTS = [
   'cbu02.alicdn.com',
   'cbu03.alicdn.com',
   'cbu04.alicdn.com',
+  'gw.alicdn.com',
   'img.alicdn.com',
   'sc01.alicdn.com',
   'sc02.alicdn.com',
