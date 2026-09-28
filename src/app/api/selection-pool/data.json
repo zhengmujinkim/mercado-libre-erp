@@ -25,7 +25,7 @@
     "supplier_backup": {
       "supplier_url": "https://s.1688.com/kq/-B3E8CEEFC2A9CAB3C6F7.html",
       "supplier_name": "义乌市迎丰宠物用品有限公司",
-      "supplier_price": 10.0,
+      "supplier_price": 10,
       "moq": "1个起",
       "monthly_sales": "24763个",
       "supplier_notes": "2年店,回头率33.9%,浙江金华,一件代发,成交量最高"
@@ -45,7 +45,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 8.99,
     "cost_usd": 1.57,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "https://detail.1688.com/offer/999514423226.html",
+      "offer_id": "999514423226",
+      "search_url": "",
+      "bound": true,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p02",
@@ -85,7 +93,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 4.99,
     "cost_usd": 1.27,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-C3E6C4A4CDEBCCD7D7B0.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p03",
@@ -96,9 +112,9 @@
     "categoryId": "CBT29884",
     "price1688": 1.2,
     "totalCost": 7.2,
-    "sellUSD": 2.0,
+    "sellUSD": 2,
     "netProfit": 22.98,
-    "margin": 64.0,
+    "margin": 64,
     "competitors": 200,
     "score": 90,
     "verdict": "hot",
@@ -126,8 +142,16 @@
     "images_synced_at": "2026-09-25T11:24:11.251098",
     "images_source": "1688_search",
     "old_sellUSD": 4.99,
-    "cost_usd": 1.0,
-    "markup_rate": 1.0
+    "cost_usd": 1,
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-C3A8D1DBBCD7CCFAB4C5B0F4.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p04",
@@ -174,9 +198,17 @@
     "images_fixed_note": "替换有中文水印的供应商图片为Alibaba国际站干净产品图(无水印无文字),5张白底产品图",
     "old_sellUSD": 4.99,
     "cost_usd": 1.15,
-    "markup_rate": 1.0,
+    "markup_rate": 1,
     "images_synced_at": "2026-09-25T11:25:10.163743",
-    "images_source": "1688_search"
+    "images_source": "1688_search",
+    "source1688": {
+      "offer_url": "https://detail.1688.com/offer/925360549234.html",
+      "offer_id": "925360549234",
+      "search_url": "",
+      "bound": true,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p05",
@@ -226,7 +258,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 5.99,
     "cost_usd": 1.18,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-B3E8CEEFB6B3B8C9C1E3CAB3.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p06",
@@ -237,7 +277,7 @@
     "categoryId": "CBT389307",
     "price1688": 1.2,
     "totalCost": 7.2,
-    "sellUSD": 2.0,
+    "sellUSD": 2,
     "netProfit": 13.91,
     "margin": 55.3,
     "competitors": 4317,
@@ -270,8 +310,16 @@
     "images_synced_at": "2026-09-25T11:27:00.199810",
     "images_source": "1688_search",
     "old_sellUSD": 3.49,
-    "cost_usd": 1.0,
-    "markup_rate": 1.0
+    "cost_usd": 1,
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "https://detail.1688.com/offer/910628766290.html",
+      "offer_id": "910628766290",
+      "search_url": "",
+      "bound": true,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p07",
@@ -315,7 +363,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 3.99,
     "cost_usd": 0.97,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-BBAFD7B1C6B7C9D7D7D3.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p08",
@@ -324,8 +380,8 @@
     "category": "electronics",
     "categoryLabel": "采集卡",
     "categoryId": "CBT1659",
-    "price1688": 12.0,
-    "totalCost": 18.0,
+    "price1688": 12,
+    "totalCost": 18,
     "sellUSD": 4.25,
     "netProfit": 72.66,
     "margin": 67.3,
@@ -336,7 +392,7 @@
     "status": "listed",
     "supplier_url": "https://detail.1688.com/offer/732317897855.html",
     "supplier_name": "深圳市龙华新区旭博健电子加工厂(13年老厂)",
-    "supplier_price": 12.0,
+    "supplier_price": 12,
     "moq": 1,
     "monthly_sales": "924笔(成交)",
     "supplier_notes": "工厂直销,HDMI转USB2.0 1080P,免驱即插即用,兼容主流直播软件,支持OBS/游戏直播录制,跨境专供",
@@ -359,7 +415,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 14.99,
     "cost_usd": 2.5,
-    "markup_rate": 0.7
+    "markup_rate": 0.7,
+    "source1688": {
+      "offer_url": "https://detail.1688.com/offer/732317897855.html",
+      "offer_id": "732317897855",
+      "search_url": "",
+      "bound": true,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p09",
@@ -401,7 +465,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 7.99,
     "cost_usd": 2.01,
-    "markup_rate": 0.7
+    "markup_rate": 0.7,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-6C6564D5DBBDE5BEB5.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p10",
@@ -443,7 +515,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 4.49,
     "cost_usd": 1.26,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-B9E8BDBAC3E6C4A4CDEBCCD7D7B0.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p11",
@@ -485,7 +565,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 4.99,
     "cost_usd": 1.07,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-D2BBB4CED0D4CFB4C1B3BDED.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p12",
@@ -523,7 +611,15 @@
       "https://cbu01.alicdn.com/img/ibank/O1CN01mJj8Btrpd2E1chua_!!2207445026951-0-cib.jpg"
     ],
     "images_synced_at": "2026-09-25T11:30:48.826109",
-    "images_source": "1688_search"
+    "images_source": "1688_search",
+    "source1688": {
+      "offer_url": "https://detail.1688.com/offer/922823483179.html",
+      "offer_id": "922823483179",
+      "search_url": "",
+      "bound": true,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p13",
@@ -573,7 +669,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 4.99,
     "cost_usd": 1.18,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-B3E8CEEFD6B8BCD7BCF4.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p14",
@@ -617,7 +721,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 11.99,
     "cost_usd": 2.94,
-    "markup_rate": 0.7
+    "markup_rate": 0.7,
+    "source1688": {
+      "offer_url": "https://detail.1688.com/offer/735252047950.html",
+      "offer_id": "735252047950",
+      "search_url": "",
+      "bound": true,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p15",
@@ -626,8 +738,8 @@
     "category": "electronics",
     "categoryLabel": "运动相机",
     "categoryId": "CBT392132",
-    "price1688": 3.0,
-    "totalCost": 9.0,
+    "price1688": 3,
+    "totalCost": 9,
     "sellUSD": 2.5,
     "netProfit": 39.32,
     "margin": 68.4,
@@ -638,7 +750,7 @@
     "status": "listed",
     "supplier_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=%E6%A1%8C%E9%9D%A2%E8%BF%B7%E4%BD%A0%E4%B8%89%E8%84%9A%E6%9E%B6+%E6%89%8B%E6%9C%BA+%E7%9B%B4%E6%92%AD",
     "supplier_name": "深圳魅力摄影器材制造有限公司(5年)/深圳科普罗塑胶制品有限公司(7年)",
-    "supplier_price": 3.0,
+    "supplier_price": 3,
     "moq": 1,
     "monthly_sales": "月销11000+件(GoPro款)/8396件(基础款)",
     "supplier_notes": "支持一件代发,桌面迷你三脚架¥0.95起/GoPro运动相机三角架¥3.0/伸缩款¥4.5,1/4通用接口,跨境可选",
@@ -661,7 +773,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 7.99,
     "cost_usd": 1.25,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=%E6%A1%8C%E9%9D%A2%E8%BF%B7%E4%BD%A0%E4%B8%89%E8%84%9A%E6%9E%B6+%E6%89%8B%E6%9C%BA+%E7%9B%B4%E6%92%AD",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p16",
@@ -711,9 +831,17 @@
     "images_fixed_note": "统一黑色可伸缩牵引绳 6张",
     "old_sellUSD": 6.99,
     "cost_usd": 1.76,
-    "markup_rate": 1.0,
+    "markup_rate": 1,
     "images_synced_at": "2026-09-25T11:36:52.216578",
-    "images_source": "1688_search"
+    "images_source": "1688_search",
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-B3E8CEEFC7A3D2FDC9FEC7A3D2FDC6F7.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p17",
@@ -756,7 +884,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 5.99,
     "cost_usd": 1.46,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-C2C3D0D0B7D6D7B0C6BFCCD7D7B0.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p18",
@@ -765,8 +901,8 @@
     "category": "electronics",
     "categoryLabel": "运动相机",
     "categoryId": "CBT392132",
-    "price1688": 45.0,
-    "totalCost": 51.0,
+    "price1688": 45,
+    "totalCost": 51,
     "sellUSD": 10.62,
     "netProfit": 160.62,
     "margin": 63.8,
@@ -777,7 +913,7 @@
     "status": "listed",
     "supplier_url": "https://detail.1688.com/offer/894529094883.html",
     "supplier_name": "运动相机配件专营(跨境同款)",
-    "supplier_price": 45.0,
+    "supplier_price": 45,
     "moq": 1,
     "monthly_sales": "17万+套(累计成交)",
     "supplier_notes": "跨境出口专供,支持一件代发,50合1含三种自拍杆款可选(普通/海绵/黑色硅胶),兼容GoPro/运动相机,主要销售地区含南美",
@@ -799,7 +935,15 @@
     "cost_usd": 7.08,
     "markup_rate": 0.5,
     "images_synced_at": "2026-09-25T11:37:47.686898",
-    "images_source": "1688_search"
+    "images_source": "1688_search",
+    "source1688": {
+      "offer_url": "https://detail.1688.com/offer/894529094883.html",
+      "offer_id": "894529094883",
+      "search_url": "",
+      "bound": true,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p19",
@@ -808,8 +952,8 @@
     "category": "electronics",
     "categoryLabel": "运动相机",
     "categoryId": "CBT392132",
-    "price1688": 135.0,
-    "totalCost": 141.0,
+    "price1688": 135,
+    "totalCost": 141,
     "sellUSD": 27.42,
     "netProfit": 40.38,
     "margin": 18.7,
@@ -820,7 +964,7 @@
     "status": "listed",
     "supplier_url": "https://detail.1688.com/offer/782116074160.html",
     "supplier_name": "深圳市龙岗区德泰美电子厂(10年老厂)",
-    "supplier_price": 135.0,
+    "supplier_price": 135,
     "moq": 2,
     "monthly_sales": "成交14万+笔(跨店)",
     "supplier_notes": "跨境出口专供,支持一件代发,V3型号索尼IMX179D镜头+4K+WiFi+防抖+30米防水,2.0寸双彩屏,TYPE-C接口,中性品牌可定制logo,多配件套装可选(64G/128G卡/备用电池等),基础款¥135起",
@@ -838,7 +982,15 @@
     "images_source": "ml_api",
     "old_sellUSD": 29.99,
     "cost_usd": 19.58,
-    "markup_rate": 0.4
+    "markup_rate": 0.4,
+    "source1688": {
+      "offer_url": "https://detail.1688.com/offer/782116074160.html",
+      "offer_id": "782116074160",
+      "search_url": "",
+      "bound": true,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p20",
@@ -847,8 +999,8 @@
     "category": "pets",
     "categoryLabel": "宠物零食",
     "categoryId": "CBT458038",
-    "price1688": 11.0,
-    "totalCost": 17.0,
+    "price1688": 11,
+    "totalCost": 17,
     "sellUSD": 4.01,
     "netProfit": 61.56,
     "margin": 65.8,
@@ -859,14 +1011,14 @@
     "status": "listed",
     "supplier_url": "https://s.1688.com/kq/-B3E8CEEFD2FBCBAEAEC1F7.html",
     "supplier_name": "金华市豪庭甄选宠物用品有限公司",
-    "supplier_price": 11.0,
+    "supplier_price": 11,
     "moq": "1件起",
     "monthly_sales": "1697笔",
     "supplier_notes": "成交量最高,流动活水循环,静音设计,浙江金华",
     "supplier_backup": {
       "supplier_url": "https://s.1688.com/kq/-B3E8CEEFD2FBCBAEAEC1F7.html",
       "supplier_name": "义乌市迎丰宠物用品有限公司",
-      "supplier_price": 11.0,
+      "supplier_price": 11,
       "moq": "1件起",
       "monthly_sales": "124笔",
       "supplier_notes": "2年店,浙江金华,跨境猫咪饮水机,自动循环流动静音"
@@ -888,7 +1040,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 12.99,
     "cost_usd": 2.36,
-    "markup_rate": 0.7
+    "markup_rate": 0.7,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-B3E8CEEFD2FBCBAEAEC1F7.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p21",
@@ -953,10 +1113,18 @@
     "images_synced_at": "2026-09-25T11:39:25.380428",
     "images_source": "1688_search",
     "old_sellUSD": 0,
-    "sellUSD": 2.0,
-    "cost_usd": 1.0,
-    "markup_rate": 1.0,
-    "price1688": 1.2
+    "sellUSD": 2,
+    "cost_usd": 1,
+    "markup_rate": 1,
+    "price1688": 1.2,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://tw.1688.com/item/-6C6564B5C6B4AE20757362.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p22",
@@ -1018,10 +1186,18 @@
     "old_sellUSD": 0,
     "sellUSD": 2.14,
     "cost_usd": 1.07,
-    "markup_rate": 1.0,
+    "markup_rate": 1,
     "price1688": 1.71,
     "images_synced_at": "2026-09-25T11:40:34.623547",
-    "images_source": "1688_search"
+    "images_source": "1688_search",
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-B3F8B7BFCCD7B5B6B5B6BEDF.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p23",
@@ -1034,8 +1210,8 @@
     "ml_category": "HOME",
     "status": "listed",
     "estimated_price_usd": 34.99,
-    "estimated_cost_cny": 55.0,
-    "estimated_profit_usd": 18.0,
+    "estimated_cost_cny": 55,
+    "estimated_profit_usd": 18,
     "profit_margin": 51,
     "weight_g": 7500,
     "competition_level": "low",
@@ -1084,8 +1260,16 @@
     "old_sellUSD": 0,
     "sellUSD": 5.66,
     "cost_usd": 3.33,
-    "markup_rate": 1.0,
-    "price1688": 17.99
+    "markup_rate": 1,
+    "price1688": 17.99,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://chinese.alibaba.com/g/gravity-blanket.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p24",
@@ -1098,8 +1282,8 @@
     "ml_category": "HOME",
     "status": "listed",
     "estimated_price_usd": 16.99,
-    "estimated_cost_cny": 15.0,
-    "estimated_profit_usd": 10.0,
+    "estimated_cost_cny": 15,
+    "estimated_profit_usd": 10,
     "profit_margin": 59,
     "weight_g": 450,
     "competition_level": "medium",
@@ -1149,8 +1333,16 @@
     "old_sellUSD": 0,
     "sellUSD": 3.78,
     "cost_usd": 2.22,
-    "markup_rate": 1.0,
-    "price1688": 10
+    "markup_rate": 1,
+    "price1688": 10,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-D5E6BFD5B1A3CEC2B1AD3530306D6C.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p25",
@@ -1163,7 +1355,7 @@
     "ml_category": "JEWELRY",
     "status": "listed",
     "estimated_price_usd": 9.99,
-    "estimated_cost_cny": 4.0,
+    "estimated_cost_cny": 4,
     "estimated_profit_usd": 7.2,
     "profit_margin": 72,
     "weight_g": 15,
@@ -1213,8 +1405,16 @@
     "old_sellUSD": 0,
     "sellUSD": 1.81,
     "cost_usd": 0.9,
-    "markup_rate": 1.0,
-    "price1688": 0.5
+    "markup_rate": 1,
+    "price1688": 0.5,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-EED1B8D6CFEEC1B4CBF8B9C7.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p26",
@@ -1277,8 +1477,16 @@
     "old_sellUSD": 0,
     "sellUSD": 2.64,
     "cost_usd": 1.32,
-    "markup_rate": 1.0,
-    "price1688": 3.5
+    "markup_rate": 1,
+    "price1688": 3.5,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-EED1B8D6CCD7D7B0.html?beginPage=2",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p27",
@@ -1291,8 +1499,8 @@
     "ml_category": "HOME",
     "status": "listed",
     "estimated_price_usd": 12.99,
-    "estimated_cost_cny": 10.0,
-    "estimated_profit_usd": 8.0,
+    "estimated_cost_cny": 10,
+    "estimated_profit_usd": 8,
     "profit_margin": 62,
     "weight_g": 350,
     "competition_level": "medium",
@@ -1341,8 +1549,16 @@
     "old_sellUSD": 0,
     "sellUSD": 2.12,
     "cost_usd": 1.06,
-    "markup_rate": 1.0,
-    "price1688": 1.62
+    "markup_rate": 1,
+    "price1688": 1.62,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://www.1688.com/market/-B3F8BEDF36BCFECCD7.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p28",
@@ -1355,7 +1571,7 @@
     "ml_category": "SPORTS",
     "status": "listed",
     "estimated_price_usd": 19.99,
-    "estimated_cost_cny": 25.0,
+    "estimated_cost_cny": 25,
     "estimated_profit_usd": 11.5,
     "profit_margin": 58,
     "weight_g": 750,
@@ -1407,8 +1623,16 @@
     "old_sellUSD": 0,
     "sellUSD": 2.11,
     "cost_usd": 1.06,
-    "markup_rate": 1.0,
-    "price1688": 1.6
+    "markup_rate": 1,
+    "price1688": 1.6,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://tw.1688.com/item/-74706520B7C0D5F0B5E6.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p29",
@@ -1421,7 +1645,7 @@
     "ml_category": "VEHICLES",
     "status": "listed",
     "estimated_price_usd": 8.99,
-    "estimated_cost_cny": 5.0,
+    "estimated_cost_cny": 5,
     "estimated_profit_usd": 5.8,
     "profit_margin": 64,
     "weight_g": 45,
@@ -1472,8 +1696,16 @@
     "old_sellUSD": 0,
     "sellUSD": 1.71,
     "cost_usd": 0.86,
-    "markup_rate": 1.0,
-    "price1688": 0.16
+    "markup_rate": 1,
+    "price1688": 0.16,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-B3F6B7E7BFDACFE3CBAEC6FBB3B5BFD5B5F7.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p30",
@@ -1486,8 +1718,8 @@
     "ml_category": "VEHICLES",
     "status": "listed",
     "estimated_price_usd": 10.99,
-    "estimated_cost_cny": 8.0,
-    "estimated_profit_usd": 7.0,
+    "estimated_cost_cny": 8,
+    "estimated_profit_usd": 7,
     "profit_margin": 64,
     "weight_g": 150,
     "competition_level": "low",
@@ -1536,8 +1768,16 @@
     "old_sellUSD": 0,
     "sellUSD": 3.31,
     "cost_usd": 1.65,
-    "markup_rate": 1.0,
-    "price1688": 5.9
+    "markup_rate": 1,
+    "price1688": 5.9,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/selloffer/offer_search.htm?keywords=汽车座椅缝隙收纳盒",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p31",
@@ -1603,7 +1843,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 8.99,
     "cost_usd": 1.24,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-B3E8CEEFCFEEC8A66C6564.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p32",
@@ -1669,7 +1917,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 7.99,
     "cost_usd": 1.08,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-CEE0C8C8BED2B7A2B0F4.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p33",
@@ -1679,11 +1935,11 @@
     "category": "beauty",
     "categoryLabel": "足部护理",
     "categoryId": "CBT389307",
-    "price1688": 8.0,
-    "totalCost": 14.0,
+    "price1688": 8,
+    "totalCost": 14,
     "sellUSD": 3.89,
     "netProfit": 63.8,
-    "margin": 43.0,
+    "margin": 43,
     "competitors": 100,
     "score": 7.8,
     "verdict": "pass",
@@ -1691,7 +1947,7 @@
     "status": "listed",
     "supplier_url": "https://s.1688.com/kq/-B5E7B6AFC4A5BDC5C6F7.html",
     "supplier_name": "温州云压电子科技有限公司",
-    "supplier_price": 8.0,
+    "supplier_price": 8,
     "moq": "2件起",
     "monthly_sales": "971笔",
     "supplier_notes": "3年店,浙江温州,电动磨脚器充电款,去死皮修脚器,USB充电",
@@ -1732,7 +1988,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 9.99,
     "cost_usd": 1.94,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-B5E7B6AFC4A5BDC5C6F7.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p34",
@@ -1796,7 +2060,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 7.99,
     "cost_usd": 1.27,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-B3E8CEEFC2FDCAB3CDEB.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p35",
@@ -1806,11 +2078,11 @@
     "category": "electronics",
     "categoryLabel": "数据线",
     "categoryId": "CBT1659",
-    "price1688": 3.0,
-    "totalCost": 9.0,
+    "price1688": 3,
+    "totalCost": 9,
     "sellUSD": 2.5,
     "netProfit": 63.8,
-    "margin": 43.0,
+    "margin": 43,
     "competitors": 300,
     "score": 7.5,
     "verdict": "pass",
@@ -1818,7 +2090,7 @@
     "status": "listed",
     "supplier_url": "https://s.1688.com/kq/-B4C5CECBD6CFD0CFDFCAFDDED1C0.html",
     "supplier_name": "深圳市睿创星原科技有限公司",
-    "supplier_price": 3.0,
+    "supplier_price": 3,
     "moq": "5条起",
     "monthly_sales": "待验证",
     "supplier_notes": "6合1磁吸充电线,Type-C/Micro/Lightning多接口,编织线材耐用",
@@ -1861,7 +2133,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 7.99,
     "cost_usd": 1.25,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-B4C5CECBD6CFD0CFDFCAFDDED1C0.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p36",
@@ -1926,7 +2206,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 9.99,
     "cost_usd": 2.07,
-    "markup_rate": 0.7
+    "markup_rate": 0.7,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-B9E8BDBACFB4C1B3D2C7.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p37",
@@ -1990,7 +2278,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 5.99,
     "cost_usd": 1.04,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-C3D4C4E3CAD6D1B9B7E2BFDABBFA.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p38",
@@ -2054,7 +2350,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 6.99,
     "cost_usd": 1.19,
-    "markup_rate": 1.0
+    "markup_rate": 1,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-CAD6D6B8BFB5B8B4C6F7.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p39",
@@ -2118,7 +2422,15 @@
     "images_source": "1688_search",
     "old_sellUSD": 14.99,
     "cost_usd": 2.01,
-    "markup_rate": 0.7
+    "markup_rate": 0.7,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-D7D4B6AFBDC1B0E8B1ADD7D3.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   },
   {
     "id": "p40",
@@ -2132,7 +2444,7 @@
     "totalCost": 19.8,
     "sellUSD": 4.67,
     "netProfit": 46.6,
-    "margin": 34.0,
+    "margin": 34,
     "competitors": 800,
     "score": 6.7,
     "verdict": "pass",
@@ -2182,6 +2494,14 @@
     "images_source": "ml_api",
     "old_sellUSD": 14.99,
     "cost_usd": 2.75,
-    "markup_rate": 0.7
+    "markup_rate": 0.7,
+    "source1688": {
+      "offer_url": "",
+      "offer_id": "",
+      "search_url": "https://s.1688.com/kq/-D0C7BFD5CDB6D3B0B5C6.html",
+      "bound": false,
+      "collected": false,
+      "last_offer_checked": ""
+    }
   }
 ]
