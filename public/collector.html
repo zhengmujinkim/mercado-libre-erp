@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1688 批量图片采集器</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; padding: 16px; min-height: 100vh; }
+h1 { font-size: 18px; margin-bottom: 12px; color: #38bdf8; }
+.section { background: #1e293b; border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+.section h2 { font-size: 14px; color: #94a3b8; margin-bottom: 8px; }
+textarea { width: 100%; height: 120px; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: #e2e8f0; padding: 10px; font-size: 13px; font-family: monospace; resize: vertical; }
+button { background: #2563eb; color: white; border: none; border-radius: 8px; padding: 10px 20px; font-size: 14px; font-weight: 600; cursor: pointer; margin: 4px; }
+button:hover { background: #1d4ed8; }
+button:disabled { background: #475569; cursor: not-allowed; }
+button.success { background: #059669; }
+button.danger { background: #dc2626; }
+.status { padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 13px; }
+.status.info { background: #1e3a5f; color: #7dd3fc; }
+.status.ok { background: #064e3b; color: #6ee7b7; }
+.status.err { background: #450a0a; color: #fca5a5; }
+.status.warn { background: #451a03; color: #fcd34d; }
+.progress-bar { width: 100%; height: 6px; background: #334155; border-radius: 3px; overflow: hidden; margin: 8px 0; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, #2563eb, #38bdf8); transition: width 0.3s; }
+.product-card { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 12px; margin: 8px 0; }
+.product-card h3 { font-size: 14px; color: #f1f5f9; margin-bottom: 6px; }
+.product-card .meta { font-size: 12px; color: #64748b; }
+.img-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 6px; margin-top: 8px; }
+.img-thumb { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 4px; border: 1px solid #334155; cursor: pointer; }
+.img-thumb:hover { border-color: #38bdf8; }
+.result-box { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 12px; margin: 8px 0; max-height: 300px; overflow-y: auto; font-family: monospace; font-size: 11px; word-break: break-all; white-space: pre-wrap; color: #94a3b8; }
+#log { max-height: 200px; overflow-y: auto; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+</style>
+</head>
+<body>
+<h1>🛒 1688 批量图片采集器</h1>
+
+<div class="section">
+  <h2>① 输入商品链接（每行一个，格式：产品ID|商品链接）</h2>
+  <textarea id="urlInput" placeholder="p01|https://detail.1688.com/offer/999514423226.html
+p02|https://detail.1688.com/offer/xxx.html
+..."></textarea>
+  <div class="btn-row">
+    <button onclick="loadPreset()">📋 加载预设列表</button>
+    <button onclick="startCollect()" id="startBtn">🚀 开始采集</button>
+    <button onclick="stopCollect()" class="danger" id="stopBtn" disabled>⏹ 停止</button>
+  </div>
+</div>
+
+<div class="section" id="progressSection" style="display:none;">
+  <h2>② 采集进度</h2>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+  <div id="statusMsg" class="status info">准备就绪</div>
+  <div id="log"></div>
+</div>
+
+<div class="section" id="resultSection" style="display:none;">
+  <h2>③ 采集结果</h2>
+  <div id="results"></div>
+  <div class="btn-row">
+    <button onclick="exportJSON()" class="success">📦 导出 JSON</button>
+    <button onclick="copyJSON()">📋 复制到剪贴板</button>
+    <button onclick="sendToERP()">📤 发送到ERP</button>
+  </div>
+  <div class="result-box" id="jsonOutput"></div>
+</div>
+
+<div class="section" id="previewSection" style="display:none;">
+  <h2>④ 图片预览（点击可查看详情）</h2>
+  <div id="previewArea"></div>
+</div>
+
+<script>
+let allResults = {};
+let isRunning = false;
+let shouldStop = false;
+const DELAY_MS = 3000; // 请求间隔
+
+function log(msg, type = 'info') {
+  const el = document.getElementById('log');
+  const div = document.createElement('div');
+  div.className = 'status ' + type;
+  div.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+  el.appendChild(div);
+  el.scrollTop = el.scrollHeight;
+}
+
+function setStatus(msg, type = 'info') {
+  const el = document.getElementById('statusMsg');
+  el.textContent = msg;
+  el.className = 'status ' + type;
+}
+
+function loadPreset() {
+  const preset = [
+    'p01|https://detail.1688.com/offer/999514423226.html',
+    'p04|https://detail.1688.com/offer/925360549234.html',
+    'p06|https://detail.1688.com/offer/910628766290.html',
+    'p08|https://detail.1688.com/offer/732317897855.html',
+    'p12|https://detail.1688.com/offer/922823483179.html',
+    'p14|https://detail.1688.com/offer/735252047950.html',
+    'p18|https://detail.1688.com/offer/894529094883.html',
+    'p19|https://detail.1688.com/offer/782116074160.html'
+  ].join('\n');
+  document.getElementById('urlInput').value = preset;
+  log('已加载8个预设商品链接', 'ok');
+}
+
+function cleanUrl(url) {
+  url = url.trim().replace(/^\/\//, 'https://');
+  url = url.replace(/\.(jpg|jpeg|png|webp)_[\dxQq!_.a-zA-Z]+\.(webp|jpg|jpeg|png)$/i, '.$1');
+  url = url.replace(/\.(jpg|jpeg|png|webp)_[\dxQq]+$/i, '$1');
+  return url;
+}
+
+function isProductImg(url) {
+  const u = url.toLowerCase();
+  if (!/alicdn\.com/.test(u)) return false;
+  if (/\/(img|assets)\/.*(icon|logo|btn|sprite|emoji|avatar|shop|banner|ad\/)/.test(u)) return false;
+  return /\/ibank\//.test(u) || /\/imge\//.test(u);
+}
+
+function classifyUrl(url) {
+  const u = url.toLowerCase();
+  if (/\/imge\//.test(u) || /desc|detail|description/.test(u)) return 'detail';
+  if (/cbu01\.alicdn/.test(u) && /\/img\/ibank\//.test(u)) return 'main';
+  return 'unknown';
+}
+
+async function collectFromPage(productId, pageUrl) {
+  log(`正在采集 ${productId}: ${pageUrl}`, 'info');
+
+  try {
+    const resp = await fetch(pageUrl, {
+      credentials: 'include',
+      headers: {
+        'Accept': 'text/html,application/xhtml+xml',
+        'Accept-Language': 'zh-CN,zh;q=0.9'
+      }
+    });
+
+    if (!resp.ok) {
+      log(`${productId} HTTP ${resp.status}`, 'err');
+      return { productId, pageUrl, title: '', images: [], error: `HTTP ${resp.status}` };
+    }
+
+    const html = await resp.text();
+
+    // Check for punish/redirect page
+    if (html.includes('x5secData') || html.includes('punish') || html.length < 2000) {
+      log(`${productId} 被反爬拦截（页面过短或含验证标记）`, 'err');
+      return { productId, pageUrl, title: '', images: [], error: 'anti-scraping' };
+    }
+
+    // Extract title
+    const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
+    const title = titleMatch ? titleMatch[1].trim().replace(/[-_|].*$/, '').trim() : '';
+
+    // Extract all image URLs from HTML
+    const imgUrls = new Set();
+
+    // Pattern 1: src attributes
+    const srcMatches = html.matchAll(/(?:src|data-src|data-ks-lazyload)=["']([^"']*alicdn[^"']*?)["']/gi);
+    for (const m of srcMatches) {
+      const url = cleanUrl(m[1]);
+      if (isProductImg(url)) imgUrls.add(url);
+    }
+
+    // Pattern 2: JSON embedded data (common in 1688)
+    const jsonImgMatches = html.matchAll(/["']((?:https?:)?\/\/cbu01\.alicdn\.com\/img\/ibank\/[^"']*?)["']/gi);
+    for (const m of jsonImgMatches) {
+      const url = cleanUrl(m[1]);
+      if (isProductImg(url)) imgUrls.add(url);
+    }
+
+    // Pattern 3: imge paths (detail images)
+    const imgeMatches = html.matchAll(/["']((?:https?:)?\/\/[^"']*alicdn[^"']*?\/imge\/[^"']*?)["']/gi);
+    for (const m of imgeMatches) {
+      const url = cleanUrl(m[1]);
+      if (isProductImg(url)) imgUrls.add(url);
+    }
+
+    const images = [...imgUrls].map(url => ({
+      url,
+      role: classifyUrl(url),
+      ok: true
+    }));
+
+    log(`${productId}: 找到 ${images.length} 张产品图 (标题: ${title || '未获取'})`, 'ok');
+    return { productId, pageUrl, title, images };
+
+  } catch (e) {
+    log(`${productId} 采集失败: ${e.message}`, 'err');
+    return { productId, pageUrl, title: '', images: [], error: e.message };
+  }
+}
+
+async function startCollect() {
+  const input = document.getElementById('urlInput').value.trim();
+  if (!input) { log('请先输入商品链接', 'warn'); return; }
+
+  const lines = input.split('\n').filter(l => l.trim());
+  if (lines.length === 0) { log('没有有效的链接', 'warn'); return; }
+
+  isRunning = true;
+  shouldStop = false;
+  allResults = {};
+  document.getElementById('startBtn').disabled = true;
+  document.getElementById('stopBtn').disabled = false;
+  document.getElementById('progressSection').style.display = 'block';
+  document.getElementById('resultSection').style.display = 'block';
+  document.getElementById('previewSection').style.display = 'block';
+  document.getElementById('results').innerHTML = '';
+  document.getElementById('previewArea').innerHTML = '';
+  document.getElementById('log').innerHTML = '';
+
+  log(`开始采集 ${lines.length} 个商品...`, 'info');
+
+  for (let i = 0; i < lines.length; i++) {
+    if (shouldStop) { log('用户中止采集', 'warn'); break; }
+
+    const line = lines[i].trim();
+    const sep = line.indexOf('|');
+    let productId, pageUrl;
+    if (sep > 0) {
+      productId = line.substring(0, sep).trim();
+      pageUrl = line.substring(sep + 1).trim();
+    } else {
+      productId = `item_${i + 1}`;
+      pageUrl = line;
+    }
+
+    setStatus(`正在采集 ${i + 1}/${lines.length}: ${productId}`);
+    document.getElementById('progressFill').style.width = `${((i + 1) / lines.length) * 100}%`;
+
+    const result = await collectFromPage(productId, pageUrl);
+    allResults[productId] = result;
+    renderResult(result);
+
+    if (i < lines.length - 1 && !shouldStop) {
+      await new Promise(r => setTimeout(r, DELAY_MS));
+    }
+  }
+
+  isRunning = false;
+  document.getElementById('startBtn').disabled = false;
+  document.getElementById('stopBtn').disabled = true;
+
+  const successCount = Object.values(allResults).filter(r => r.images.length > 0).length;
+  const totalImgs = Object.values(allResults).reduce((s, r) => s + r.images.length, 0);
+  setStatus(`采集完成！${successCount}/${lines.length} 个商品成功，共 ${totalImgs} 张图片`, successCount > 0 ? 'ok' : 'err');
+  log(`采集完成: ${successCount} 成功, ${lines.length - successCount} 失败, 共 ${totalImgs} 张图片`, 'ok');
+
+  updateJsonOutput();
+}
+
+function stopCollect() {
+  shouldStop = true;
+  log('正在停止...', 'warn');
+}
+
+function renderResult(result) {
+  const container = document.getElementById('results');
+  const card = document.createElement('div');
+  card.className = 'product-card';
+  card.id = `card_${result.productId}`;
+
+  const statusIcon = result.images.length > 0 ? '✅' : '❌';
+  card.innerHTML = `
+    <h3>${statusIcon} ${result.productId} ${result.title ? '- ' + result.title : ''}</h3>
+    <div class="meta">${result.images.length} 张图 | ${result.error || '成功'}</div>
+  `;
+
+  if (result.images.length > 0) {
+    const grid = document.createElement('div');
+    grid.className = 'img-grid';
+    result.images.forEach(img => {
+      const imgEl = document.createElement('img');
+      imgEl.className = 'img-thumb';
+      imgEl.src = img.url;
+      imgEl.title = `${img.role}\n${img.url}`;
+      imgEl.onclick = () => window.open(img.url, '_blank');
+      grid.appendChild(imgEl);
+    });
+    card.appendChild(grid);
+  }
+
+  container.appendChild(card);
+
+  // Also update preview
+  if (result.images.length > 0) {
+    const preview = document.getElementById('previewArea');
+    const section = document.createElement('div');
+    section.style.marginBottom = '12px';
+    section.innerHTML = `<strong style="color:#38bdf8">${result.productId}</strong>`;
+    const grid = document.createElement('div');
+    grid.className = 'img-grid';
+    result.images.forEach(img => {
+      const imgEl = document.createElement('img');
+      imgEl.className = 'img-thumb';
+      imgEl.src = img.url;
+      imgEl.title = `${img.role}\n${img.url}`;
+      imgEl.onclick = () => window.open(img.url, '_blank');
+      grid.appendChild(imgEl);
+    });
+    section.appendChild(grid);
+    preview.appendChild(section);
+  }
+}
+
+function updateJsonOutput() {
+  document.getElementById('jsonOutput').textContent = JSON.stringify(allResults, null, 2);
+}
+
+function exportJSON() {
+  const blob = new Blob([JSON.stringify(allResults, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `collect1688_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  log('JSON 已下载', 'ok');
+}
+
+function copyJSON() {
+  navigator.clipboard.writeText(JSON.stringify(allResults, null, 2)).then(() => {
+    log('JSON 已复制到剪贴板', 'ok');
+  }).catch(() => {
+    log('复制失败，请手动从下方复制', 'err');
+  });
+}
+
+async function sendToERP() {
+  const erpUrl = `${location.origin}/api/collect1688/receive`;
+  let sent = 0, failed = 0;
+
+  for (const [productId, data] of Object.entries(allResults)) {
+    if (data.images.length === 0) continue;
+    try {
+      const resp = await fetch('/api/collect1688/receive', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          productId: data.productId,
+          pageUrl: data.pageUrl,
+          title: data.title,
+          images: data.images.map(i => i.url)
+        })
+      });
+      if (resp.ok) { sent++; log(`${productId} → ERP 成功`, 'ok'); }
+      else { failed++; log(`${productId} → ERP 失败: HTTP ${resp.status}`, 'err'); }
+    } catch (e) {
+      failed++;
+      log(`${productId} → ERP 失败: ${e.message}`, 'err');
+    }
+  }
+
+  log(`发送完成: ${sent} 成功, ${failed} 失败`, sent > 0 ? 'ok' : 'err');
+}
+</script>
+</body>
+</html>
