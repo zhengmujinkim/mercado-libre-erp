@@ -44,6 +44,7 @@ function Sidebar() {
         <NavItem href="/product-scorer" icon="🎯" label="智能选品评分" />
         <NavItem href="/selection-pool" icon="📋" label="待审选品池" />
         <NavItem href="/collect1688" icon="📥" label="1688图片采集" />
+        <NavItem href="/scene-gen" icon="🎨" label="AI场景图" />
         <NavItem href="/calculator" icon="🧮" label="利润计算器" />
         <NavItem href="/infringement-check" icon="⚠️" label="侵权检测" />
         <NavItem href="/listing" icon="📦" label="商品上架" />
