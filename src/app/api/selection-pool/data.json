@@ -1283,6 +1283,14 @@
       "bound": false,
       "collected": false,
       "last_offer_checked": ""
+    },
+    "package_specs": {
+      "weight_g": 7500,
+      "length_cm": 40,
+      "width_cm": 30,
+      "height_cm": 15,
+      "source": "manual",
+      "note": "真空压缩包装，实际以发货测量为准"
     }
   },
   {

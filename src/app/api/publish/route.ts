@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAccessToken } from '@/lib/token-store';
 import { checkProductImages, isImageCheckerEnabled } from '@/lib/image-quality-checker';
+import { resolveSpecs, type PackageSpecs } from '@/lib/1688-specs';
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
@@ -69,7 +70,20 @@ async function validateImagesWithAI(images: string[]): Promise<{
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { title, description, pictures, price, category_id, attributes = [], site_id = 'MLB', sku = '', warranty } = body;
+    const { title, description, pictures, price, category_id, attributes = [], site_id = 'MLB', sku = '', warranty, offer_1688_url, package_specs } = body;
+
+    // 解析包装规格：优先级 manual > stored > 1688抓取
+    let specs: PackageSpecs = { source: null, confidence: 'low' };
+    if (package_specs && (package_specs.weight_g || package_specs.length_cm)) {
+      specs = { ...package_specs, source: 'manual', confidence: 'high' };
+    } else if (offer_1688_url) {
+      specs = await resolveSpecs({ offerUrl: offer_1688_url });
+    }
+
+    // 如果通过 1688 URL 抓取成功，记录规格到 request body
+    if (specs.source) {
+      body.package_specs = specs;
+    }
 
     // 参数校验
     if (!title || typeof title !== 'string' || title.trim().length < 3) {
@@ -145,6 +159,10 @@ export async function POST(request: NextRequest) {
         pictures: pictures.map((id: string) => ({ id })),
         attributes: finalAttributes,
         video_id: undefined,
+        ...(specs.weight_g ? { package_weight: specs.weight_g } : {}),
+        ...(specs.length_cm ? { package_length: specs.length_cm } : {}),
+        ...(specs.width_cm ? { package_width: specs.width_cm } : {}),
+        ...(specs.height_cm ? { package_height: specs.height_cm } : {}),
       }),
     });
 
@@ -192,6 +210,7 @@ export async function POST(request: NextRequest) {
       success: true,
       id: listingId,
       permalink: createData.permalink,
+      packageSpecs: specs,
       imageCheck: {
         score: imageCheck.score,
         compliant: true,
@@ -214,12 +233,14 @@ export async function GET() {
       '自动填充品牌/SKU/GTIN/保修属性',
       '自动设置跨境物流（remote）',
       '自动激活上架（active）',
+      '1688商品页自动提取包装规格（重量/尺寸）',
+      '包装规格传入ML API避免运费补扣',
     ],
     imageChecker: {
       enabled: isImageCheckerEnabled(),
       model: 'qwen-vl-max',
       minScore: 80,
     },
-    usage: 'POST { title, pictures: string[], site_id, price?, category_id?, attributes?, sku?, warranty? }',
+    usage: 'POST { title, pictures: string[], site_id, price?, category_id?, attributes?, sku?, warranty?, offer_1688_url?, package_specs?: { weight_g, length_cm, width_cm, height_cm } }',
   });
 }
