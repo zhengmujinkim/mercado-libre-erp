@@ -131,7 +131,6 @@ export async function saveTokens(data: {
 export async function refreshAccessToken(): Promise<StoredTokens | null> {
   const stored = await getStoredTokens();
   const rt = stored?.refresh_token || process.env.MELI_REFRESH_TOKEN;
-  if (!rt) return null;
 
   const clientId = process.env.MERCADO_LIBRE_CLIENT_ID;
   const clientSecret = process.env.MERCADO_LIBRE_CLIENT_SECRET;
@@ -140,57 +139,103 @@ export async function refreshAccessToken(): Promise<StoredTokens | null> {
     return null;
   }
 
+  // Strategy 1: Try refresh_token grant (if we have a refresh token)
+  if (rt) {
+    try {
+      const res = await fetch('https://api.mercadolibre.com/oauth/token', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          grant_type: 'refresh_token',
+          client_id: clientId,
+          client_secret: clientSecret,
+          refresh_token: rt,
+        }),
+      });
+
+      const data = await res.json();
+      if (!data.error && data.access_token) {
+        const newStored: StoredTokens = {
+          access_token: data.access_token,
+          refresh_token: data.refresh_token || rt,
+          expires_at: Math.floor(Date.now() / 1000) + (data.expires_in || 21600),
+          user_id: stored?.user_id || USER_ID,
+          token_type: data.token_type || 'Bearer',
+          scope: data.scope || stored?.scope || '',
+          updated_at: new Date().toISOString(),
+        };
+
+        await saveTokens({
+          access_token: newStored.access_token,
+          refresh_token: newStored.refresh_token,
+          expires_in: data.expires_in || 21600,
+          token_type: newStored.token_type,
+          scope: newStored.scope,
+          user_id: newStored.user_id,
+        });
+        return newStored;
+      }
+      console.error('Token refresh failed:', data.error, data.message);
+    } catch (err) {
+      console.error('Token refresh error:', err);
+    }
+  }
+
+  // Strategy 2: Fallback to client_credentials grant
+  console.log('Falling back to client_credentials grant');
   try {
     const res = await fetch('https://api.mercadolibre.com/oauth/token', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({
-        grant_type: 'refresh_token',
+        grant_type: 'client_credentials',
         client_id: clientId,
         client_secret: clientSecret,
-        refresh_token: rt,
       }),
     });
 
     const data = await res.json();
-    if (data.error) {
-      console.error('Token refresh failed:', data.error, data.message);
-      return null;
+    if (!data.error && data.access_token) {
+      const newStored: StoredTokens = {
+        access_token: data.access_token,
+        refresh_token: data.refresh_token || rt || '',
+        expires_at: Math.floor(Date.now() / 1000) + (data.expires_in || 21600),
+        user_id: data.user_id || stored?.user_id || USER_ID,
+        token_type: data.token_type || 'Bearer',
+        scope: data.scope || stored?.scope || '',
+        updated_at: new Date().toISOString(),
+      };
+
+      await saveTokens({
+        access_token: newStored.access_token,
+        refresh_token: newStored.refresh_token,
+        expires_in: data.expires_in || 21600,
+        token_type: newStored.token_type,
+        scope: newStored.scope,
+        user_id: newStored.user_id,
+      });
+      return newStored;
     }
-
-    const newStored: StoredTokens = {
-      access_token: data.access_token,
-      refresh_token: data.refresh_token || rt,
-      expires_at: Math.floor(Date.now() / 1000) + (data.expires_in || 21600),
-      user_id: stored?.user_id || USER_ID,
-      token_type: data.token_type || 'Bearer',
-      scope: data.scope || stored?.scope || '',
-      updated_at: new Date().toISOString(),
-    };
-
-    await saveTokens({
-      access_token: newStored.access_token,
-      refresh_token: newStored.refresh_token,
-      expires_in: data.expires_in || 21600,
-      token_type: newStored.token_type,
-      scope: newStored.scope,
-      user_id: newStored.user_id,
-    });
-    return newStored;
+    console.error('client_credentials failed:', data.error, data.message);
   } catch (err) {
-    console.error('Token refresh error:', err);
-    return null;
+    console.error('client_credentials error:', err);
   }
+
+  return null;
 }
 
 export async function getAccessToken(): Promise<string | null> {
   const stored = await getStoredTokens();
-  if (!stored) return null;
+  if (!stored) {
+    // No stored token at all — try to get one via refresh/client_credentials
+    const refreshed = await refreshAccessToken();
+    return refreshed?.access_token || null;
+  }
 
   const now = Math.floor(Date.now() / 1000);
   if (stored.expires_at - now < 300) {
     const refreshed = await refreshAccessToken();
-    return refreshed?.access_token || null;
+    return refreshed?.access_token || stored.access_token;
   }
   return stored.access_token;
 }
