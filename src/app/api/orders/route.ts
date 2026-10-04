@@ -28,13 +28,9 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ orders: [], total: 0, mock: false, message: '请先完成美客多授权' });
     }
 
-    // Try multiple search endpoints for CBT compatibility
-    let data: Record<string, unknown> = {};
-    let apiSuccess = false;
-
-    // Endpoint 1: /orders/search with seller param
+    // CBT 专用端点：/marketplace/orders/search
     const res1 = await fetch(
-      `${MELI_CONFIG.apiBase}/orders/search?seller=${MELI_CONFIG.userId}&sort=date_desc&limit=50`,
+      `${MELI_CONFIG.apiBase}/marketplace/orders/search?seller=${MELI_CONFIG.userId}&sort=date_desc&limit=50`,
       {
         headers: { Authorization: `Bearer ${token}` },
         cache: 'no-store',
@@ -46,10 +42,10 @@ export async function GET(request: NextRequest) {
       apiSuccess = true;
     }
 
-    // Endpoint 2: /orders/recent if first endpoint returns empty
+    // 备用端点：/marketplace/orders/recent
     if (!apiSuccess || ((data.results as unknown[]) || []).length === 0) {
       const res2 = await fetch(
-        `${MELI_CONFIG.apiBase}/orders/recent?seller=${MELI_CONFIG.userId}&limit=50`,
+        `${MELI_CONFIG.apiBase}/marketplace/orders/recent?seller=${MELI_CONFIG.userId}&limit=50`,
         {
           headers: { Authorization: `Bearer ${token}` },
           cache: 'no-store',
